@@ -100,7 +100,6 @@ const LargeLabelStrong = styled.h2`
   }
 `;
 
-
 const BottomRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -199,7 +198,7 @@ const Home: NextPage = () => {
       </Header>
       <Arrow src='images/arrow-down.svg' alt='down arrow' />
       <MainLayout>
-      <Link href='/creditcardcheckout' passHref>
+        <Link href='/creditcardcheckout' passHref>
           <a>
             <DailyUI
               backgroundColor={'#E9F1F6'}

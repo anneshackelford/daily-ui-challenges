@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 interface DailyProps {
   backgroundColor: string;
@@ -63,7 +63,7 @@ export const DailyUI = ({
     <Daily backgroundColor={backgroundColor}>
       <DailyContainer>
         <img
-          src={`images/${number}.png`}
+          src={`/images/${number}.png`}
           alt={`Daily UI Challenge ${number} ${name}`}
         />
         <DailyBottomRow>
