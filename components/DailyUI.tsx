@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface DailyProps {
-    backgroundColor: string;
+  backgroundColor: string;
 }
 
 const Daily = styled.div<DailyProps>`
@@ -13,6 +13,14 @@ const Daily = styled.div<DailyProps>`
     margin: 73px 62px auto;
     width: 515px;
   }
+  @media screen and (max-width: 600px) {
+    width: 360px;
+    height: 270px;
+    > img {
+      margin: 0 auto;
+      width: 300px;
+    }
+  }
 `;
 
 const DailyContainer = styled.div`
@@ -21,6 +29,10 @@ const DailyContainer = styled.div`
   margin: 0 auto;
   margin-top: 73px;
   width: 515px;
+  @media screen and (max-width: 600px) {
+    margin-top: 36px;;
+    width: 300px;
+  }
 `;
 
 const DailyBottomRow = styled.div`
@@ -38,6 +50,10 @@ const DailyLabel = styled.label`
   line-height: 30px;
   text-transform: uppercase;
   color: ${(props) => props.color || '#ffffff'};
+  @media screen and (max-width: 600px) {
+    font-size: 16.5211px;
+    line-height: 20px;
+  }
 `;
 
 interface DailyUIProps {
@@ -47,7 +63,12 @@ interface DailyUIProps {
   color: string;
 }
 
-export const DailyUI = ({ backgroundColor, number, name, color }: DailyUIProps) => {
+export const DailyUI = ({
+  backgroundColor,
+  number,
+  name,
+  color,
+}: DailyUIProps) => {
   return (
     <Daily backgroundColor={backgroundColor}>
       <DailyContainer>
