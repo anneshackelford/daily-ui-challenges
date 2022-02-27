@@ -68,6 +68,7 @@ export const DailyUI = ({
           alt={`Daily UI Challenge ${number} ${name}`}
           width={516}
           height={290}
+          layout='responsive'
         />
         <DailyBottomRow>
           <DailyLabel color={color}>{name}</DailyLabel>
