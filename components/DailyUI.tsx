@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
 interface DailyProps {
@@ -62,9 +63,11 @@ export const DailyUI = ({
   return (
     <Daily backgroundColor={backgroundColor}>
       <DailyContainer>
-        <img
+        <Image
           src={`/images/${number}.png`}
           alt={`Daily UI Challenge ${number} ${name}`}
+          width={516}
+          height={290}
         />
         <DailyBottomRow>
           <DailyLabel color={color}>{name}</DailyLabel>
