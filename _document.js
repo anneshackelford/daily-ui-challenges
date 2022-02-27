@@ -8,6 +8,10 @@ export default function Document() {
           href='http://fonts.cdnfonts.com/css/clash-display'
           rel='stylesheet'
         />
+        <link
+          href='https://api.fontshare.com/css?f[]=switzer@400&display=swap'
+          rel='stylesheet'
+        />
       </Head>
       <body>
         <Main />
