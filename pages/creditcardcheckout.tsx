@@ -10,7 +10,7 @@ const Layout = styled.div`
 `;
 
 function CreditCardCheckout() {
-  return (<Layout>Work in progress for Credit Card Checkout!</Layout>);
+  return (<div>Work in progress for Credit Card Checkout!</div>);
 }
 
 export default CreditCardCheckout;

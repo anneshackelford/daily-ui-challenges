@@ -10,7 +10,7 @@ const Layout = styled.div`
 `;
 
 function SignUp() {
-  return (<Layout>Work in progress for Sign Up!</Layout>);
+  return (<div>Work in progress for Sign Up!</div>);
 }
 
 export default SignUp;
