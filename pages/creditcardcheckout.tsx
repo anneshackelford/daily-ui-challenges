@@ -9,8 +9,8 @@ const Layout = styled.div`
   font-size: 48px;
 `;
 
-function SignUp() {
-  return <Layout>Work in progress for Sign Up!</Layout>;
+function CreditCardCheckout() {
+  return <Layout>Work in progress for Credit Card Checkout!</Layout>;
 }
 
-export default SignUp;
+export default CreditCardCheckout;

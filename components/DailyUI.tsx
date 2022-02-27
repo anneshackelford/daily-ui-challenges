@@ -5,14 +5,10 @@ interface DailyProps {
 }
 
 const Daily = styled.div<DailyProps>`
-  /* height: 480px;
-  width: 640px; */
+  height: 100%;
   background-color: ${(props) => props.backgroundColor || 'none'};
   border: 1px solid #ffffff;
-
-
   @media screen and (max-width: 600px) {
-
   }
 `;
 
@@ -20,11 +16,12 @@ const DailyContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 73px 62px;
-  >img {
-      max-width: 100%;
+
+  > img {
+    max-width: 100%;
   }
   @media screen and (max-width: 600px) {
-    margin-top: 36px;;
+    margin-top: 36px;
   }
 `;
 
