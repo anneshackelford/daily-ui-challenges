@@ -1,6 +1,6 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import styled from 'styled-components';
-// import Image from '../components/Image';
+import Image from '../components/Image';
 
 const height = '100vh';
 
