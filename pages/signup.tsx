@@ -132,6 +132,7 @@ const SignUp = () => {
           objectFit='cover'
           // loader={'custom'}
           // unoptimized
+
         />
       </BackgroundWrap>
       <Overlay>
