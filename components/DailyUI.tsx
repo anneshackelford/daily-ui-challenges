@@ -36,7 +36,7 @@ const DailyBottomRow = styled.div`
 `;
 
 const DailyLabel = styled.label`
-  font-family: Clash Display;
+  font-family: 'Clash Display', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;

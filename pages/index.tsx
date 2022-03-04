@@ -20,7 +20,7 @@ const Header = styled.header`
     ${LabelMixin}
     margin-top: 20px;
 
-    font-family: Clash Display;
+    font-family: 'Clash Display', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 96px;
@@ -47,7 +47,7 @@ const TopRow = styled.div`
 
 const LabelStrong = styled.h3`
   ${LabelMixin}
-  font-family: Switzer;
+  font-family: 'Switzer', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -61,7 +61,7 @@ const LabelStrong = styled.h3`
 
 const Label = styled.h3`
   ${LabelMixin}
-  font-family: Switzer;
+  font-family: 'Switzer', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -75,7 +75,7 @@ const Label = styled.h3`
 const LargeLabel = styled.h2`
   ${LabelMixin}
   margin-right: 6px;
-  font-family: Clash Display;
+  font-family: 'Clash Display', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -89,7 +89,7 @@ const LargeLabel = styled.h2`
 const LargeLabelStrong = styled.h2`
   ${LabelMixin}
 
-  font-family: Clash Display;
+  font-family: 'Clash Display', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;

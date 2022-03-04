@@ -15,7 +15,7 @@ const BackgroundWrap = styled.div`
 `;
 
 const BackgroundText = styled.div`
-  font-family: Switzer;
+font-family: 'Switzer', sans-serif;
   font-style: normal;
   text-align: left;
   color: #ffffff;
@@ -57,7 +57,7 @@ const NavBar = styled.nav`
 `;
 
 const Label = styled.label`
-  font-family: Switzer;
+font-family: 'Switzer', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -100,7 +100,7 @@ const SignUpBox = styled.div`
   border-radius: 10px;
 
   > h1 {
-    font-family: Switzer;
+    font-family: 'Switzer', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -110,7 +110,7 @@ const SignUpBox = styled.div`
     margin-top: 69px;
   }
   > h4 {
-    font-family: Switzer;
+    font-family: 'Switzer', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
