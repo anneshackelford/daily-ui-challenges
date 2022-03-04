@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-// import Image from './Image';
-
 
 interface DailyProps {
   backgroundColor: string;
@@ -71,8 +69,6 @@ export const DailyUI = ({
           width={516}
           height={290}
           layout='responsive'
-          // loader={'custom'}
-          // unoptimized
         />
         <DailyBottomRow>
           <DailyLabel color={color}>{name}</DailyLabel>

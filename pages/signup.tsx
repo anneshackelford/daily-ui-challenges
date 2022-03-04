@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-// import Image from '../components/Image';
 
 const height = '100vh';
 
@@ -130,9 +129,7 @@ const SignUp = () => {
           alt='forest background image'
           layout='fill'
           objectFit='cover'
-          // loader={'custom'}
-          // unoptimized
-
+          priority
         />
       </BackgroundWrap>
       <Overlay>
