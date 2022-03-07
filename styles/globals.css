@@ -7,6 +7,7 @@ body {
     font-family: 'Clash Display', sans-serif;                                            
     background-color: #262626;
     color: #fff;
+    font-display: optional;
 }
 
 a {
