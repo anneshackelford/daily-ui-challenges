@@ -66,8 +66,8 @@ export const DailyUI = ({
         <Image
           src={`/images/${number}.png`}
           alt={`Daily UI Challenge ${number} ${name}`}
-          width={516}
-          height={290}
+          width={530}
+          height={312}
           layout='responsive'
         />
         <DailyBottomRow>
