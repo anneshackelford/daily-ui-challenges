@@ -45,6 +45,7 @@ const OverlayBackground = styled.div`
     rgba(0, 0, 0, 0) 100%
   );
   @media screen and (min-width: 767px) {
+    
   }
 `;
 
