@@ -3,11 +3,8 @@ import styled, { css } from 'styled-components';
 import SignUpBox from '../components/SignUpBox';
 
 const Container = styled.header`
-  height: 120vh;
-  @media screen and (min-width: 767px) {
-    height: 150vh;
-  }
-  @media screen and (min-width: 1025px) {
+  height: 150vh;
+  @media screen and (min-width: 1440px) {
     height: 100vh;
   }
 `;
