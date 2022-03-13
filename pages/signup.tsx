@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import SignUpBox from '../components/SignUpBox';
+import { breakpoint } from '../styles/constants';
 
 const Container = styled.header``;
 
@@ -12,7 +13,7 @@ const BackgroundWrap = styled.div`
     height: 1568px;
   }
 
-  @media screen and (min-width: 1588px) {
+  @media screen and (min-width: ${breakpoint.large}) {
     height: 100vh;
   }
 `;
@@ -78,7 +79,7 @@ const BackgroundText = styled.div`
     margin: 0;
   }
   @media screen and (min-width: 767px) {
-    margin: 261px 0 0 30px;
+    margin: 261px 0 0 0;
     > h1 {
       font-size: 72px;
       margin-top: 24px;
@@ -143,7 +144,7 @@ const MainContainer = styled.main`
   gap: 182px;
   flex-direction: column;
 
-  @media screen and (min-width: 1588px) {
+  @media screen and (min-width: ${breakpoint.large}) {
     margin: 93px auto 0;
     flex-direction: row;
     justify-content: space-between;
