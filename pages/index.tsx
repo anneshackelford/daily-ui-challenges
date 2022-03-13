@@ -209,7 +209,7 @@ const Home: NextPage = () => {
         </Header>
         <Arrow src='images/arrow-down.svg' alt='down arrow' />
         <MainLayout>
-          <Link href='/creditcardcheckout' passHref>
+          <Link href='/daily-ui/creditcardcheckout' passHref>
             <a>
               <DailyUI
                 backgroundColor={'#E9F1F6'}
@@ -219,7 +219,7 @@ const Home: NextPage = () => {
               />
             </a>
           </Link>
-          <Link href='/signup' passHref>
+          <Link href='/daily-ui/signup' passHref>
             <a>
               <DailyUI
                 backgroundColor={'#d0dcd1'}
