@@ -7,7 +7,7 @@ const Container = styled.header``;
 
 const BackgroundWrap = styled.div`
   position: relative;
-  height: 1171px;
+  height: 1240px;
 
   @media screen and (min-width: 767px) {
     height: 1625px;

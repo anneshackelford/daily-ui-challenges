@@ -86,6 +86,8 @@ const Blur = styled.div`
     rgba(255, 255, 255, 0.2) 12.58%,
     rgba(255, 255, 255, 0.05) 80.81%
   );
+  box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 `;
 
 const SignUpBoxContainer = styled.div`
@@ -128,8 +130,6 @@ const SignUpBoxContainer = styled.div`
 const Layout = styled.div`
   position: relative;
   width: 100%;
-  box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
   @media screen and (min-width: 552px) {
     width: 552px;
     min-width: 552px;
