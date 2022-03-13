@@ -34,7 +34,7 @@ const Main = styled.main`
   flex-direction: column;
   align-self: center;
   margin-top: 74px;
-  text-align: center ;
+  text-align: center;
 
   > span {
     font-family: 'Ubuntu';
@@ -117,7 +117,7 @@ const CreditCardCheckout = () => {
         </NavRightSide>
       </NavBar>
       <Main>
-        <span>We're almost there</span>
+        <span>We&apos;re almost there</span>
       </Main>
       <Footer>
         <Copyright>© 2022 DailyUI_002. All rights reserved.</Copyright>
