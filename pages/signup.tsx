@@ -2,17 +2,18 @@ import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import SignUpBox from '../components/SignUpBox';
 
-const Container = styled.header`
-  height: 150vh;
-  @media screen and (min-width: 1440px) {
-    height: 100vh;
-  }
-`;
+const Container = styled.header``;
 
 const BackgroundWrap = styled.div`
   position: relative;
-  height: 100%;
-  object-position: 30%;
+  height: 1171px;
+
+  @media screen and (min-width: 767px) {
+    height: 130vh;
+  }
+  @media screen and (min-width: 1588px) {
+    height: 100vh;
+  }
 `;
 
 const Overlay = styled.div`
@@ -25,14 +26,6 @@ const Overlay = styled.div`
   width: 100%;
 
   @media screen and (min-width: 767px) {
-    /* align-items: center; */
-    /* text-align: center; ; */
-    /* top: 50%;
-left: 50%;
-transform: translate(-50%, -50%); */
-
-    /* justify-content: center;
-  align-items: center; */
   }
 `;
 
@@ -45,7 +38,6 @@ const OverlayBackground = styled.div`
     rgba(0, 0, 0, 0) 100%
   );
   @media screen and (min-width: 767px) {
-    
   }
 `;
 
@@ -54,15 +46,6 @@ const OverlayContents = styled.div`
   top: 0;
 
   @media screen and (min-width: 767px) {
-    /* max-width: 100%; */
-    /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto; */
-    /* align-self: center ; */
-
-    /* max-width: 1520px; */
-
     top: 0%;
     left: 50%;
     transform: translate(-50%, -0%);
@@ -70,7 +53,6 @@ const OverlayContents = styled.div`
   @media screen and (min-width: 1024px) {
   }
   @media screen and (min-width: 1441px) {
-    width: 1520px;
   }
 `;
 
@@ -161,13 +143,9 @@ const MainContainer = styled.main`
   flex-direction: column;
 
   @media screen and (min-width: 1588px) {
-    /* margin: 93px 253px 0 150px; */
     margin: 93px auto 0;
     flex-direction: row;
     justify-content: space-between;
-    /* gap: 302px; */
-    /* gap:0; */
-    /* max-width: 1440px; */
     gap: 198px;
   }
 `;
@@ -182,6 +160,8 @@ const SignUp = () => {
           layout='fill'
           objectFit='cover'
           objectPosition={'26%'}
+          height='1080'
+          width='1920'
           priority
         />
       </BackgroundWrap>
