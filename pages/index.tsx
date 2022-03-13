@@ -151,7 +151,10 @@ const MainLayout = styled.main`
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    margin-top: 58px;
+    /* margin-top: 58px; */
+    position: absolute;
+    top: 100vh;
+    padding-top: 3px;
   }
 `;
 
@@ -160,7 +163,9 @@ const Arrow = styled.img`
   @media screen and (max-width: 768px) {
     display: block;
     margin-left: 38px;
-    margin-top: 192px;
+    /* margin-top: 192px; */
+    position: absolute;
+    top: 90vh;
   }
 `;
 
