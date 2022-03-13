@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { breakpoint } from '../styles/constants';
 
 const InputMixin = css`
   height: 50px;
@@ -18,7 +19,6 @@ const InputMixin = css`
 
   ::placeholder {
     color: black;
-    /* color: rgba(0, 0, 0, 0.6); */
   }
 `;
 
@@ -106,7 +106,7 @@ const SignUpBoxContainer = styled.div`
     > h1 {
       font-size: 36px;
       line-height: 48px;
-      margin:0;
+      margin: 0;
     }
     > h2 {
     }
@@ -115,36 +115,12 @@ const SignUpBoxContainer = styled.div`
 
 const Layout = styled.div`
   width: 100%;
-
-
-  /* -webkit-backdrop-filter: blur(20px);
-backdrop-filter: blur(20px);
-background: linear-gradient(
-  154.4deg,
-  rgba(255, 255, 255, 0.2) 12.58%,
-  rgba(255, 255, 255, 0.05) 80.81%
-); */
-
-  /* -webkit-backdrop-filter: blur(20px); */
-  /* backdrop-filter: blur(20px); */
-  /* background: blur(20%); */
-  /* background: linear-gradient(
-  154.4deg,
-  rgba(0, 0, 0, 0.3) 80.81%,
-  rgba(0, 0, 0, 0.3) 12.58%
-); */
-background-color: rgba(0, 0, 0, 0.2);
-
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   @media screen and (min-width: 767px) {
     width: 552px;
     min-width: 552px;
-    margin-right: 100px;
-    /* max-width: 50%;
-    max-height: 50%; */
-    /* padding: 20px 40px; */
-
   }
 `;
 
