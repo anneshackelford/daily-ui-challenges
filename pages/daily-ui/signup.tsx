@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled, { css } from 'styled-components';
-import SignUpBox from '../components/SignUpBox';
-import { breakpoint } from '../styles/constants';
+import SignUpBox from '../../components/SignUpBox';
+import { breakpoint } from '../../styles/constants';
 
 const Container = styled.header``;
 
