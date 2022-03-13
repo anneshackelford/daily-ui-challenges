@@ -18,7 +18,7 @@ const InputMixin = css`
   border: none;
 
   ::placeholder {
-    color: black;
+    color: rgba(0, 0, 0, 0.6);
   }
 `;
 
@@ -36,7 +36,6 @@ const NameInput = styled.div`
   flex-direction: column;
   margin-top: 38px;
   @media screen and (min-width: 767px) {
-    /* flex-direction: row; */
   }
 `;
 
@@ -78,7 +77,20 @@ const Checkbox = styled.input`
   accent-color: #749978;
 `;
 
+const Blur = styled.div`
+  position: relative;
+  height: 750px;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    154.4deg,
+    rgba(255, 255, 255, 0.2) 12.58%,
+    rgba(255, 255, 255, 0.05) 80.81%
+  );
+`;
+
 const SignUpBoxContainer = styled.div`
+  position: absolute;
+  top: 0;
   margin: 0 23px;
   text-align: center;
 
@@ -114,11 +126,11 @@ const SignUpBoxContainer = styled.div`
 `;
 
 const Layout = styled.div`
+  position: relative;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 552px) {
     width: 552px;
     min-width: 552px;
   }
@@ -127,6 +139,7 @@ const Layout = styled.div`
 const SignUpBox = () => {
   return (
     <Layout>
+      <Blur />
       <SignUpBoxContainer>
         <h1>Create an account</h1>
         <h2>Already have one? Sign in</h2>
