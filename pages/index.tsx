@@ -153,7 +153,7 @@ const MainLayout = styled.main`
     grid-template-columns: 1fr;
     /* margin-top: 58px; */
     position: absolute;
-    top: 100vh;
+    top: 95vh;
     padding-top: 3px;
   }
 `;
@@ -165,7 +165,7 @@ const Arrow = styled.img`
     margin-left: 38px;
     /* margin-top: 192px; */
     position: absolute;
-    top: 90vh;
+    top: 85vh;
   }
 `;
 
