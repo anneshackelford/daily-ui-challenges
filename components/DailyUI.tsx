@@ -31,6 +31,7 @@ const DailyBottomRow = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: 0 8px;
+  gap: 10px;
 `;
 
 const DailyLabel = styled.label`

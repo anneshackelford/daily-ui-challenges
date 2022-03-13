@@ -40,7 +40,7 @@ const NameInput = styled.div`
 `;
 
 const TermsLabel = styled.label`
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
