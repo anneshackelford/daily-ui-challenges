@@ -9,8 +9,9 @@ const BackgroundWrap = styled.div`
   height: 1171px;
 
   @media screen and (min-width: 767px) {
-    height: 130vh;
+    height: 1568px;
   }
+
   @media screen and (min-width: 1588px) {
     height: 100vh;
   }
