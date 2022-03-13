@@ -10,7 +10,7 @@ const BackgroundWrap = styled.div`
   height: 1171px;
 
   @media screen and (min-width: 767px) {
-    height: 1568px;
+    height: 1625px;
   }
 
   @media screen and (min-width: ${breakpoint.large}) {
@@ -139,7 +139,7 @@ const Group = styled.div`
 
 const MainContainer = styled.main`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin: 99px 7px 0 7px;
   gap: 182px;
   flex-direction: column;
