@@ -171,9 +171,12 @@ const Information = styled.div`
 `;
 
 const Basket = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-end;
+  @media screen and (min-width: 1700px) {
+    display: flex;
+  }
 `;
 
 const Summary = styled.div`
@@ -268,37 +271,39 @@ const CityInput = styled.input`
 const ShippingButtonMixin = css`
   width: 240px;
   height: 78px;
-  background: rgba(44, 121, 165, 0.05);
-  border: 1.5px solid #2c79a5;
-  box-sizing: border-box;
-  border-radius: 20px;
-  > span {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 18px;
-    color: #2c79a5;
-  }
-  @media screen and (min-width: 540px) {
-    width: 320.3px;
-  }
-`;
-
-const ShippingButton = styled.button`
-  ${ShippingButtonMixin};
-`;
-
-const ExpressShippingButton = styled.button`
-  ${ShippingButtonMixin};
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   background: transparent;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
+  color: #2c79a5;
 
+  @media screen and (min-width: 540px) {
+    width: 320.3px;
+    padding: 0 33px;
+  }
+`;
+
+const ShippingButton = styled.div`
+  ${ShippingButtonMixin};
+  border: 1.5px solid #2c79a5;
+  background: rgba(44, 121, 165, 0.05);
+`;
+
+const ExpressShippingButton = styled.div`
+  ${ShippingButtonMixin};
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
   color: rgba(0, 0, 0, 0.5);
 `;
 
@@ -464,11 +469,15 @@ const CreditCardCheckout = () => {
               <ShippingButtons>
                 <ShippingButton>
                   <span>Standard shipping</span>
-                  <span>4,95€</span>
+                  <span>
+                    <b>4,95€</b>
+                  </span>
                 </ShippingButton>
                 <ExpressShippingButton>
                   <span>Express shipping</span>
-                  <span>9,95€</span>
+                  <span>
+                    <b>9,95€</b>
+                  </span>
                 </ExpressShippingButton>
               </ShippingButtons>
             </ShippingMethod>
