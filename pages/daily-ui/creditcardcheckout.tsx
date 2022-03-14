@@ -88,7 +88,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin-top: 74px;
+  margin: 74px 20px 0;
   text-align: center;
 
   > h1 {
@@ -127,29 +127,45 @@ const Images = styled.div`
 
 const OrderContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   margin-top: 92px;
   gap: 28px;
+  @media screen and (min-width: 1700px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 const Information = styled.div`
-  width: 1010px;
   height: 778px;
+  width: 100%;
   background: rgba(248, 248, 248, 0.6);
   border-radius: 20px;
+
+  @media screen and (min-width: 1300px) {
+    display: block;
+    width: 1010px;
+    height: 778px;
+  }
 `;
 
 const Basket = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end ;
+  align-items: flex-end;
 `;
 
 const Summary = styled.div`
-  width: 482px;
+  width: 100%;
   height: 567px;
   background: rgba(248, 248, 248, 0.6);
   border-radius: 20px;
+  @media screen and (min-width: 1300px) {
+    display: block;
+    width: 482px;
+    height: 567px;
+  }
 `;
 
 const Button = styled.a`
@@ -159,8 +175,7 @@ const Button = styled.a`
   border-radius: 20px;
   margin: 13px 0 0 0;
   display: flex;
-  justify-content: center ;
-
+  justify-content: center;
 `;
 
 const ButtonText = styled.p`
