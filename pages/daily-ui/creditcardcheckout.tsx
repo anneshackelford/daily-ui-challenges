@@ -122,7 +122,16 @@ const Images = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-top: 47px;
+`;
+
+const Line = styled.div`
+  margin: 0;
+  width: 100px;
+  height: 0px;
+  background-color: rgba(44, 121, 165, 0.3);;
+  border-bottom: 3px solid rgba(44, 121, 165, 0.3);
 `;
 
 const OrderContainer = styled.div`
@@ -203,9 +212,9 @@ const CreditCardCheckout = () => {
         <Progress>
           <Images>
             <img src='/images/ellipseDark.svg' />
-            <img src='/images/lineProgress.svg' />
+            <Line />
             <img src='/images/ellipseLight.svg' />
-            <img src='/images/lineProgress.svg' />
+            <Line />
             <img src='/images/ellipseLight.svg' />
           </Images>
           <ProgressText>
