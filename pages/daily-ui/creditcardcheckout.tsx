@@ -3,9 +3,7 @@ import styled, { css } from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   background: linear-gradient(244.14deg, #9eb3bf 43.96%, #f2f2f2 89.95%);
-  height: 100vh;
 `;
 
 const NavBar = styled.nav`
@@ -29,40 +27,6 @@ const NavBar = styled.nav`
   }
 `;
 
-const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  margin-top: 74px;
-  text-align: center;
-
-  > span {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 85%;
-    color: #ffffff;
-  }
-`;
-
-const Footer = styled.footer`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  background: #2c79a5;
-  position: absolute;
-  height: 130px;
-  width: 100%;
-  left: 0px;
-  bottom: 0px;
-  @media screen and (min-width: 767px) {
-    padding: 0 150px;
-  }
-`;
-
 const NavRightSide = styled.div`
   display: none;
 
@@ -77,6 +41,21 @@ const NavRightSide = styled.div`
     font-size: 18px;
     line-height: 21px;
     color: #ffffff;
+  }
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #2c79a5;
+  height: 130px;
+  width: 100%;
+  margin-top: 181px;
+  @media screen and (min-width: 767px) {
+    padding: 0 150px;
   }
 `;
 
@@ -105,6 +84,94 @@ const Copyright = styled.label`
   color: #ffffff;
 `;
 
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 74px;
+  text-align: center;
+
+  > h1 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 85%;
+    color: #ffffff;
+    margin: 0;
+  }
+`;
+
+const Progress = styled.div``;
+
+const ProgressText = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 56px;
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 85%;
+  color: #ffffff;
+  margin-top: 36px;
+`;
+
+const Images = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 47px;
+`;
+
+const OrderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 92px;
+  gap: 28px;
+`;
+
+const Information = styled.div`
+  width: 1010px;
+  height: 778px;
+  background: rgba(248, 248, 248, 0.6);
+  border-radius: 20px;
+`;
+
+const Basket = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end ;
+`;
+
+const Summary = styled.div`
+  width: 482px;
+  height: 567px;
+  background: rgba(248, 248, 248, 0.6);
+  border-radius: 20px;
+`;
+
+const Button = styled.a`
+  width: 117px;
+  height: 55px;
+  background: #2c79a5;
+  border-radius: 20px;
+  margin: 13px 0 0 0;
+  display: flex;
+  justify-content: center ;
+
+`;
+
+const ButtonText = styled.p`
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+`;
+
 const CreditCardCheckout = () => {
   return (
     <Container>
@@ -117,7 +184,30 @@ const CreditCardCheckout = () => {
         </NavRightSide>
       </NavBar>
       <Main>
-        <span>We&apos;re almost there</span>
+        <h1>We&apos;re almost there</h1>
+        <Progress>
+          <Images>
+            <img src='/images/ellipseDark.svg' />
+            <img src='/images/lineProgress.svg' />
+            <img src='/images/ellipseLight.svg' />
+            <img src='/images/lineProgress.svg' />
+            <img src='/images/ellipseLight.svg' />
+          </Images>
+          <ProgressText>
+            <span>Shipping</span>
+            <span>Payment</span>
+            <span>Ordering</span>
+          </ProgressText>
+        </Progress>
+        <OrderContainer>
+          <Information></Information>
+          <Basket>
+            <Summary></Summary>
+            <Button>
+              <ButtonText>Next</ButtonText>
+            </Button>
+          </Basket>
+        </OrderContainer>
       </Main>
       <Footer>
         <Copyright>© 2022 DailyUI_002. All rights reserved.</Copyright>
