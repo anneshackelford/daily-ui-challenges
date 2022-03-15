@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import styled, { css } from 'styled-components';
+import BackIcon from '../icons/BackIcon';
+import NextIcon from '../icons/NextIcon';
 
 const Basket = styled.div`
   display: flex;
@@ -8,8 +11,11 @@ const Basket = styled.div`
   @media screen and (min-width: 1700px) {
   }
 `;
+interface Props {
+  page: number;
+}
 
-const Button = styled.a`
+const ButtonMixin = css`
   width: 117px;
   height: 55px;
   background: #2c79a5;
@@ -17,6 +23,30 @@ const Button = styled.a`
   margin: 13px 0 0 0;
   display: flex;
   justify-content: center;
+`;
+
+const BackButton = styled.a<Props>`
+  ${ButtonMixin}
+  background-color: ${(props) => (props.page === 1 ? '#C0D7E4' : '#2c79a5')};
+  cursor: ${(props) => (props.page === 1 ? 'default' : 'pointer')};
+  > div > span {
+    color: ${(props) => (props.page === 1 ? '#2c79a5' : 'rgba(255, 255, 255, 0.8)')};
+  }
+  > div > svg > path  {
+    fill: ${(props) => (props.page === 1 ? '#2c79a5' : 'rgba(255, 255, 255, 0.8)')};
+  }
+`;
+
+const NextButton = styled.a<Props>`
+  ${ButtonMixin}
+  background-color: ${(props) => (props.page === 3 ? '#C0D7E4' : '#2c79a5')};
+  cursor: ${(props) => (props.page === 3 ? 'default' : 'pointer')};
+  > div > span {
+    color: ${(props) => (props.page === 3 ? '#2C79A5' : 'rgba(255, 255, 255, 0.8)')};
+  }
+  > div > svg > path  {
+    fill: ${(props) => (props.page === 3 ? '#2C79A5' : 'rgba(255, 255, 255, 0.8)')};
+  }
 `;
 
 const ButtonText = styled.div`
@@ -38,6 +68,16 @@ const ButtonText = styled.div`
     margin-top: 2px;
   }
 `;
+
+// const BackButtonText = styled.div<Props>`
+//   ${ButtonTextMixin}
+//   display: ${(props) => (props.page === 1 ? 'none' : 'flex')};
+// `;
+
+// const NextButtonText = styled.div<Props>`
+//   ${ButtonTextMixin}
+//   display: ${(props) => (props.page === 3 ? 'none' : 'flex')};
+// `;
 
 const Summary = styled.div`
   padding: 52px 0 36px;
@@ -62,7 +102,6 @@ const Items = styled.div`
   align-items: left;
   justify-content: space-between;
   padding-bottom: 44px;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
   margin: 6px 12px 0 25px;
   @media screen and (min-width: 540px) {
     flex-direction: row;
@@ -189,7 +228,22 @@ const Title = styled.div`
   margin: 0 54px;
 `;
 
-const CreditCardCheckoutBasket = () => {
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+`;
+
+const CreditCardCheckoutBasket = ({
+  clickNext,
+  clickPrev,
+  page,
+}: {
+  clickNext: () => void;
+  clickPrev: () => void;
+  page: number;
+}) => {
   return (
     <Basket>
       <Summary>
@@ -250,12 +304,22 @@ const CreditCardCheckoutBasket = () => {
           </ItemHorizontal>
         </Total>
       </Summary>
-      <Button>
-        <ButtonText>
-          <span>Next</span>
-          <img src='/images/ic_round-navigate-next.svg' />
-        </ButtonText>
-      </Button>
+      <Buttons>
+        <BackButton onClick={clickPrev} page={page}>
+          <ButtonText>
+            {/* <Image src='/images/ic_round-navigate-back.svg' alt="" height={24} width={24} /> */}
+            <BackIcon/>
+            <span>Back</span>
+          </ButtonText>
+        </BackButton>
+        <NextButton onClick={clickNext} page={page}>
+          <ButtonText>
+            <span>Next</span>
+            {/* <Image src='/images/ic_round-navigate-next.svg' alt="" height={24} width={24} /> */}
+            <NextIcon/>
+          </ButtonText>
+        </NextButton>
+      </Buttons>
     </Basket>
   );
 };

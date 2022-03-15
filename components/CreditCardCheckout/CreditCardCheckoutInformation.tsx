@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 
 const Information = styled.div`
@@ -151,15 +152,14 @@ const Mixin = css`
 
 const PersonalDetails = styled.div`
   ${Mixin};
-  margin: 52px 40px 0;
-  padding-bottom: 56px;
-
+  padding: 52px 58px 56px;
   gap: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   @media screen and (min-width: 540px) {
-    margin: 52px 58px 0;
+    padding: 52px 58px 56px;
   }
   @media screen and (min-width: 1300px) {
+    padding: 52px 0 56px;
     gap: 96px;
     width: 892px;
   }
@@ -198,8 +198,24 @@ const ShippingMethod = styled.div`
   }
 `;
 
-const CreditCardCheckoutInformation = () => {
-    return (
+interface Props {
+  page: number;
+}
+
+const Page1 = styled.div<Props>`
+  display: ${(props) => (props.page === 1 ? 'block' : 'none')};
+`;
+const Page2 = styled.div<Props>`
+  display: ${(props) => (props.page === 2 ? 'block' : 'none')};
+`;
+const Page3 = styled.div<Props>`
+  display: ${(props) => (props.page === 3 ? 'block' : 'none')};
+`;
+
+const CreditCardCheckoutInformation = ({ page }: { page: number }) => {
+  return (
+    <>
+      <Page1 page={page}>
         <Information>
           <PersonalDetails>
             <h2>Personal&nbsp;details</h2>
@@ -265,7 +281,23 @@ const CreditCardCheckoutInformation = () => {
             </ShippingButtons>
           </ShippingMethod>
         </Information>
-    );
-}
+      </Page1>
+      <Page2 page={page}>
+        <Information>
+        <PersonalDetails>
+            <h2>Page 2</h2>
+            </PersonalDetails>
+        </Information>
+      </Page2>
+      <Page3 page={page}>
+        <Information>
+        <PersonalDetails>
+            <h2>Page 3</h2>
+            </PersonalDetails>
+        </Information>
+      </Page3>
+    </>
+  );
+};
 
 export default CreditCardCheckoutInformation;

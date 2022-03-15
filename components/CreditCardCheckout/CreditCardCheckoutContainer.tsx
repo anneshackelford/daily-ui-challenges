@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import CreditCardCheckoutBasket from './CreditCardCheckoutBasket';
 import CreditCardCheckoutInformation from './CreditCardCheckoutInformation';
@@ -65,6 +66,16 @@ const OrderContainer = styled.div`
 `;
 
 const CreditCardCheckoutContainer = () => {
+  const [page, setPage] = useState(1);
+
+  const clickNext = () => {
+    if (page !== 3) setPage(page + 1);
+  };
+
+  const clickPrev = () => {
+    if (page !== 1) setPage(page - 1);
+  };
+
   return (
     <Main>
       <h1>We&apos;re almost there</h1>
@@ -83,8 +94,12 @@ const CreditCardCheckoutContainer = () => {
         </ProgressText>
       </Progress>
       <OrderContainer>
-        <CreditCardCheckoutInformation />
-        <CreditCardCheckoutBasket />
+        <CreditCardCheckoutInformation page={page} />
+        <CreditCardCheckoutBasket
+          clickNext={clickNext}
+          clickPrev={clickPrev}
+          page={page}
+        />
       </OrderContainer>
     </Main>
   );
