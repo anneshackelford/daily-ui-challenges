@@ -29,7 +29,12 @@ const NavBar = styled.nav`
 `;
 
 const NavRightSide = styled.div`
+> span {
   display: none;
+}
+  > img {
+    display: block;
+  }
 
   @media screen and (min-width: 767px) {
     display: flex;
@@ -42,6 +47,12 @@ const NavRightSide = styled.div`
     font-size: 18px;
     line-height: 21px;
     color: #ffffff;
+    > span {
+  display: block;
+}
+    > img {
+      display: none;
+    }
   }
 `;
 
@@ -97,6 +108,7 @@ const CreditCardCheckout = () => {
           <span>Product</span>
           <span>Contact</span>
           <span>About</span>
+          <img src="/images/hamburger.svg" />
         </NavRightSide>
       </NavBar>
       <CreditCardCheckoutContainer />

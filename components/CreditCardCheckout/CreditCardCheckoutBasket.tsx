@@ -40,7 +40,7 @@ const ButtonText = styled.div`
 `;
 
 const Summary = styled.div`
-  padding: 34px 0 36px;
+  padding: 52px 0 36px;
   background: rgba(248, 248, 248, 0.6);
   border-radius: 20px;
   width: 100%;
@@ -165,7 +165,11 @@ const Cost = styled.div`
 `;
 
 const Total = styled.div`
-  margin: 24px 54px 0 54px;
+  margin: 24px 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
 
   > div > p {
     font-family: 'Ubuntu';
@@ -175,6 +179,9 @@ const Total = styled.div`
     line-height: 18px;
 
     color: rgba(0, 0, 0, 0.8);
+  }
+  @media screen and (min-width: 540px) {
+    margin: 24px 50px 0;
   }
 `;
 
