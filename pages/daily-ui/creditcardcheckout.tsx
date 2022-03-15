@@ -54,9 +54,12 @@ const Footer = styled.footer`
   background: #2c79a5;
   height: 130px;
   width: 100%;
-  margin-top: 181px;
+  margin-top: 81px;
   @media screen and (min-width: 767px) {
     padding: 0 150px;
+  }
+  @media screen and (min-width: 1700px) {
+    margin-top: 181px;
   }
 `;
 
@@ -96,7 +99,7 @@ const CreditCardCheckout = () => {
           <span>About</span>
         </NavRightSide>
       </NavBar>
-      <CreditCardCheckoutContainer/>
+      <CreditCardCheckoutContainer />
       <Footer>
         <Copyright>© 2022 DailyUI_002. All rights reserved.</Copyright>
         <FooterRightSide>

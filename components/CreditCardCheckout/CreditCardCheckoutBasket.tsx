@@ -4,6 +4,7 @@ const Basket = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  align-self: stretch;
   @media screen and (min-width: 1700px) {
   }
 `;
@@ -18,19 +19,32 @@ const Button = styled.a`
   justify-content: center;
 `;
 
-const ButtonText = styled.p`
+const ButtonText = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
+
+  > span {
+    margin-right: 6px;
+  }
+  > img {
+    margin-top: 2px;
+  }
 `;
 
 const Summary = styled.div`
   padding: 34px 0 36px;
   background: rgba(248, 248, 248, 0.6);
   border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
 
   @media screen and (min-width: 540px) {
     width: 482px;
@@ -44,13 +58,15 @@ const Summary = styled.div`
 
 const Items = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: left;
   justify-content: space-between;
   padding-bottom: 44px;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-  margin: 15px 22px 0 38px;
-  @media screen and (min-width: 1300px) {
+  margin: 6px 12px 0 25px;
+  @media screen and (min-width: 540px) {
+    flex-direction: row;
+    margin: 6px 22px 0 35px;
   }
 `;
 
@@ -69,6 +85,28 @@ const ItemHorizontal = styled.div`
     line-height: 21px;
     color: rgba(0, 0, 0, 0.8);
   }
+
+  > p {
+    margin-top: 0px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  > p:last-of-type {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+
+    color: rgba(0, 0, 0, 0.8);
+  }
 `;
 const ItemVertical = styled.div`
   display: flex;
@@ -76,13 +114,19 @@ const ItemVertical = styled.div`
   align-items: flex-start;
   justify-content: left;
   margin: 0;
-  > div {
-    margin: 0 0 0 16px;
+  > img {
+    align-self: center;
+  }
+  > p {
+    margin: -15px 0 0 16px;
+  }
+  > p:last-of-type {
+    margin: 4px 0 0 16px;
   }
 `;
 
-const Label = styled.div`
-  margin-top: 4px;
+const Label = styled.p`
+  margin: 4px 0 0 10px;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 300;
@@ -96,15 +140,42 @@ const Cost = styled.div`
   flex-direction: column;
   align-items: left;
   justify-content: space-between;
-  margin: 0 50px;
-  padding-bottom: 44px;
+  margin: 0 40px;
+  gap: 14px;
+  padding-bottom: 20px;
   padding-top: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: rgba(0, 0, 0, 0.5);
+
+  > div:last-of-type {
+    margin-left: 21px;
+  }
+
+  @media screen and (min-width: 540px) {
+    margin: 0 50px;
+  }
 `;
 
 const Total = styled.div`
- margin: 0 54px;
+  margin: 24px 54px 0 54px;
+
+  > div > p {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: rgba(0, 0, 0, 0.8);
+  }
 `;
 
 const Title = styled.div`
@@ -115,13 +186,12 @@ const CreditCardCheckoutBasket = () => {
   return (
     <Basket>
       <Summary>
-          <Title>
-
-          
-        <ItemHorizontal>
-          <h2>Order</h2>
-          <img src='/images/exportIcon.png' height={18} width={18} />
-        </ItemHorizontal></Title>
+        <Title>
+          <ItemHorizontal>
+            <h2>Order</h2>
+            <img src='/images/exportIcon.png' height={18} width={18} />
+          </ItemHorizontal>
+        </Title>
         <Items>
           <ItemVertical>
             <img src='/images/dualSenseController.png' />
@@ -174,7 +244,10 @@ const CreditCardCheckoutBasket = () => {
         </Total>
       </Summary>
       <Button>
-        <ButtonText>Next</ButtonText>
+        <ButtonText>
+          <span>Next</span>
+          <img src='/images/ic_round-navigate-next.svg' />
+        </ButtonText>
       </Button>
     </Basket>
   );
