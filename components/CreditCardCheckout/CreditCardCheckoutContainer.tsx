@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import CreditCardCheckoutBasket from './CreditCardCheckoutBasket';
 import CreditCardCheckoutInformation from './CreditCardCheckoutInformation';
 
 const Main = styled.main`
@@ -63,49 +64,6 @@ const OrderContainer = styled.div`
   }
 `;
 
-const Basket = styled.div`
-  display: none;
-  flex-direction: column;
-  align-items: flex-end;
-  @media screen and (min-width: 1700px) {
-    display: flex;
-  }
-`;
-
-const Summary = styled.div`
-  width: 300px;
-  height: 567px;
-  background: rgba(248, 248, 248, 0.6);
-  border-radius: 20px;
-  @media screen and (min-width: 540px) {
-    width: 482px;
-  }
-  @media screen and (min-width: 1300px) {
-    display: block;
-    width: 482px;
-    height: 567px;
-  }
-`;
-
-const Button = styled.a`
-  width: 117px;
-  height: 55px;
-  background: #2c79a5;
-  border-radius: 20px;
-  margin: 13px 0 0 0;
-  display: flex;
-  justify-content: center;
-`;
-
-const ButtonText = styled.p`
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #ffffff;
-`;
-
 const CreditCardCheckoutContainer = () => {
   return (
     <Main>
@@ -126,12 +84,7 @@ const CreditCardCheckoutContainer = () => {
       </Progress>
       <OrderContainer>
         <CreditCardCheckoutInformation />
-        <Basket>
-          <Summary></Summary>
-          <Button>
-            <ButtonText>Next</ButtonText>
-          </Button>
-        </Basket>
+        <CreditCardCheckoutBasket />
       </OrderContainer>
     </Main>
   );
