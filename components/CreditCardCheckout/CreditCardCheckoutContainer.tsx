@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
+import CreditCardCheckoutContext from '../CreditCardCheckoutContext';
 import CreditCardCheckoutBasket from './CreditCardCheckoutBasket';
 import CreditCardCheckoutInformation from './CreditCardCheckoutInformation';
 
@@ -65,27 +66,44 @@ const OrderContainer = styled.div`
   }
 `;
 
+const Page1ImageDark = styled.img<{ page: number }>`
+  display: ${(props) => (props.page === 1 ? 'block' : 'none')};
+`;
+
+const Page1ImageLight = styled.img<{ page: number }>`
+  display: ${(props) => (props.page !== 1 ? 'block' : 'none')};
+`;
+const Page2ImageDark = styled.img<{ page: number }>`
+  display: ${(props) => (props.page === 2 ? 'block' : 'none')};
+`;
+
+const Page2ImageLight = styled.img<{ page: number }>`
+  display: ${(props) => (props.page !== 2 ? 'block' : 'none')};
+`;
+const Page3ImageDark = styled.img<{ page: number }>`
+  display: ${(props) => (props.page === 3 ? 'block' : 'none')};
+`;
+
+const Page3ImageLight = styled.img<{ page: number }>`
+  display: ${(props) => (props.page !== 3 ? 'block' : 'none')};
+`;
+
 const CreditCardCheckoutContainer = () => {
-  const [page, setPage] = useState(1);
-
-  const clickNext = () => {
-    if (page !== 3) setPage(page + 1);
-  };
-
-  const clickPrev = () => {
-    if (page !== 1) setPage(page - 1);
-  };
+  const { page } = useContext(CreditCardCheckoutContext);
 
   return (
     <Main>
       <h1>We&apos;re almost there</h1>
       <Progress>
         <Images>
-          <img src='/images/ellipseDark.svg' />
+          <Page1ImageDark src='/images/ellipseDark.svg' page={page} />
+          <Page1ImageLight src='/images/ellipseLight.svg' page={page} />
           <Line />
-          <img src='/images/ellipseLight.svg' />
+          <Page2ImageDark src='/images/ellipseDark.svg' page={page} />
+          <Page2ImageLight src='/images/ellipseLight.svg' page={page} />
           <Line />
-          <img src='/images/ellipseLight.svg' />
+          <Page3ImageDark src='/images/ellipseDark.svg' page={page} />
+          <Page3ImageLight src='/images/ellipseLight.svg' page={page} />
         </Images>
         <ProgressText>
           <span>Shipping</span>
@@ -94,12 +112,8 @@ const CreditCardCheckoutContainer = () => {
         </ProgressText>
       </Progress>
       <OrderContainer>
-        <CreditCardCheckoutInformation page={page} />
-        <CreditCardCheckoutBasket
-          clickNext={clickNext}
-          clickPrev={clickPrev}
-          page={page}
-        />
+        <CreditCardCheckoutInformation />
+        <CreditCardCheckoutBasket />
       </OrderContainer>
     </Main>
   );

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
+import CreditCardCheckoutContext from '../CreditCardCheckoutContext';
 
 const Information = styled.div`
   width: 100%;
@@ -212,91 +213,95 @@ const Page3 = styled.div<Props>`
   display: ${(props) => (props.page === 3 ? 'block' : 'none')};
 `;
 
-const CreditCardCheckoutInformation = ({ page }: { page: number }) => {
+const CreditCardCheckoutInformation = () => {
   return (
-    <>
-      <Page1 page={page}>
-        <Information>
-          <PersonalDetails>
-            <h2>Personal&nbsp;details</h2>
-            <Form>
-              <Group>
-                <Label>First name*</Label>
-                <SelectedInput />
-              </Group>
-              <Group>
-                <Label>Last name*</Label>
-                <Input />
-              </Group>
-              <Group>
-                <Label>Email address*</Label>
-                <Input />
-              </Group>
-              <Group>
-                <Label>Phone number</Label>
-                <Input />
-              </Group>
-            </Form>
-          </PersonalDetails>
-          <ShippingInformation>
-            <h2>Shipping&nbsp;information</h2>
-            <Form>
-              <Group>
-                <Label>Street address</Label>
-                <Input />
-              </Group>
-              <Group>
-                <Label>Additional information</Label>
-                <Input />
-              </Group>
-              <Group>
-                <Label>Zip code</Label>
-                <ZipCodeInput />
-              </Group>
-              <Group>
-                <Label>City</Label>
-                <CityInput />
-              </Group>
-              <Group>
-                <Label>Country</Label>
-                <CountryInput />
-              </Group>
-            </Form>
-          </ShippingInformation>
-          <ShippingMethod>
-            <h2>Shipping&nbsp;method</h2>
-            <ShippingButtons>
-              <ShippingButton>
-                <span>Standard shipping</span>
-                <span>
-                  <b>4,95€</b>
-                </span>
-              </ShippingButton>
-              <ExpressShippingButton>
-                <span>Express shipping</span>
-                <span>
-                  <b>9,95€</b>
-                </span>
-              </ExpressShippingButton>
-            </ShippingButtons>
-          </ShippingMethod>
-        </Information>
-      </Page1>
-      <Page2 page={page}>
-        <Information>
-        <PersonalDetails>
-            <h2>Page 2</h2>
-            </PersonalDetails>
-        </Information>
-      </Page2>
-      <Page3 page={page}>
-        <Information>
-        <PersonalDetails>
-            <h2>Page 3</h2>
-            </PersonalDetails>
-        </Information>
-      </Page3>
-    </>
+    <CreditCardCheckoutContext.Consumer>
+      {({ page }) => (
+        <>
+          <Page1 page={page}>
+            <Information>
+              <PersonalDetails>
+                <h2>Personal&nbsp;details</h2>
+                <Form>
+                  <Group>
+                    <Label>First name*</Label>
+                    <SelectedInput />
+                  </Group>
+                  <Group>
+                    <Label>Last name*</Label>
+                    <Input />
+                  </Group>
+                  <Group>
+                    <Label>Email address*</Label>
+                    <Input />
+                  </Group>
+                  <Group>
+                    <Label>Phone number</Label>
+                    <Input />
+                  </Group>
+                </Form>
+              </PersonalDetails>
+              <ShippingInformation>
+                <h2>Shipping&nbsp;information</h2>
+                <Form>
+                  <Group>
+                    <Label>Street address</Label>
+                    <Input />
+                  </Group>
+                  <Group>
+                    <Label>Additional information</Label>
+                    <Input />
+                  </Group>
+                  <Group>
+                    <Label>Zip code</Label>
+                    <ZipCodeInput />
+                  </Group>
+                  <Group>
+                    <Label>City</Label>
+                    <CityInput />
+                  </Group>
+                  <Group>
+                    <Label>Country</Label>
+                    <CountryInput />
+                  </Group>
+                </Form>
+              </ShippingInformation>
+              <ShippingMethod>
+                <h2>Shipping&nbsp;method</h2>
+                <ShippingButtons>
+                  <ShippingButton>
+                    <span>Standard shipping</span>
+                    <span>
+                      <b>4,95€</b>
+                    </span>
+                  </ShippingButton>
+                  <ExpressShippingButton>
+                    <span>Express shipping</span>
+                    <span>
+                      <b>9,95€</b>
+                    </span>
+                  </ExpressShippingButton>
+                </ShippingButtons>
+              </ShippingMethod>
+            </Information>
+          </Page1>
+          <Page2 page={page}>
+            <Information>
+              <PersonalDetails>
+                <h2>Payment Page</h2>
+              </PersonalDetails>
+            </Information>
+          </Page2>
+          <Page3 page={page}>
+            <Information>
+              <PersonalDetails>
+                <h2>Ordering Page</h2>
+              </PersonalDetails>
+            </Information>
+          </Page3>
+        </>
+      )}
+    </CreditCardCheckoutContext.Consumer>
   );
 };
 

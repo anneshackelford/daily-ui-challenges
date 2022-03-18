@@ -1,5 +1,8 @@
+import { useContext } from 'react';
 import Image from 'next/image';
+import { MouseEventHandler } from 'react';
 import styled, { css } from 'styled-components';
+import CreditCardCheckoutContext from '../CreditCardCheckoutContext';
 import BackIcon from '../icons/BackIcon';
 import NextIcon from '../icons/NextIcon';
 
@@ -11,9 +14,9 @@ const Basket = styled.div`
   @media screen and (min-width: 1700px) {
   }
 `;
-interface Props {
-  page: number;
-}
+// interface Props {
+//   page: number;
+// }
 
 const ButtonMixin = css`
   width: 117px;
@@ -25,27 +28,31 @@ const ButtonMixin = css`
   justify-content: center;
 `;
 
-const BackButton = styled.a<Props>`
+const BackButton = styled.a`
   ${ButtonMixin}
   background-color: ${(props) => (props.page === 1 ? '#C0D7E4' : '#2c79a5')};
   cursor: ${(props) => (props.page === 1 ? 'default' : 'pointer')};
   > div > span {
-    color: ${(props) => (props.page === 1 ? '#2c79a5' : 'rgba(255, 255, 255, 0.8)')};
+    color: ${(props) =>
+    props.page === 1 ? '#2c79a5' : 'rgba(255, 255, 255, 0.8)'};
   }
-  > div > svg > path  {
-    fill: ${(props) => (props.page === 1 ? '#2c79a5' : 'rgba(255, 255, 255, 0.8)')};
+  > div > svg > path {
+    fill: ${(props) =>
+    props.page === 1 ? '#2c79a5' : 'rgba(255, 255, 255, 0.8)'};
   }
 `;
 
-const NextButton = styled.a<Props>`
+const NextButton = styled.a`
   ${ButtonMixin}
   background-color: ${(props) => (props.page === 3 ? '#C0D7E4' : '#2c79a5')};
   cursor: ${(props) => (props.page === 3 ? 'default' : 'pointer')};
   > div > span {
-    color: ${(props) => (props.page === 3 ? '#2C79A5' : 'rgba(255, 255, 255, 0.8)')};
+    color: ${(props) =>
+    props.page === 3 ? '#2C79A5' : 'rgba(255, 255, 255, 0.8)'};
   }
-  > div > svg > path  {
-    fill: ${(props) => (props.page === 3 ? '#2C79A5' : 'rgba(255, 255, 255, 0.8)')};
+  > div > svg > path {
+    fill: ${(props) =>
+    props.page === 3 ? '#2C79A5' : 'rgba(255, 255, 255, 0.8)'};
   }
 `;
 
@@ -235,15 +242,9 @@ const Buttons = styled.div`
   gap: 16px;
 `;
 
-const CreditCardCheckoutBasket = ({
-  clickNext,
-  clickPrev,
-  page,
-}: {
-  clickNext: () => void;
-  clickPrev: () => void;
-  page: number;
-}) => {
+const CreditCardCheckoutBasket = () => {
+  const { page, clickBack, clickNext } = useContext(CreditCardCheckoutContext);
+
   return (
     <Basket>
       <Summary>
@@ -305,18 +306,16 @@ const CreditCardCheckoutBasket = ({
         </Total>
       </Summary>
       <Buttons>
-        <BackButton onClick={clickPrev} page={page}>
+        <BackButton onClick={clickBack} page={page}>
           <ButtonText>
-            {/* <Image src='/images/ic_round-navigate-back.svg' alt="" height={24} width={24} /> */}
-            <BackIcon/>
+            <BackIcon />
             <span>Back</span>
           </ButtonText>
         </BackButton>
         <NextButton onClick={clickNext} page={page}>
           <ButtonText>
             <span>Next</span>
-            {/* <Image src='/images/ic_round-navigate-next.svg' alt="" height={24} width={24} /> */}
-            <NextIcon/>
+            <NextIcon />
           </ButtonText>
         </NextButton>
       </Buttons>

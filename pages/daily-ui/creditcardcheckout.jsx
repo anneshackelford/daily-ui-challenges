@@ -1,5 +1,7 @@
+import { MouseEventHandler, useState } from 'react';
 import styled, { css } from 'styled-components';
 import CreditCardCheckoutContainer from '../../components/CreditCardCheckout/CreditCardCheckoutContainer';
+import CreditCardCheckoutContext from '../../components/CreditCardCheckoutContext';
 
 const Container = styled.div`
   display: flex;
@@ -29,9 +31,9 @@ const NavBar = styled.nav`
 `;
 
 const NavRightSide = styled.div`
-> span {
-  display: none;
-}
+  > span {
+    display: none;
+  }
   > img {
     display: block;
   }
@@ -48,8 +50,8 @@ const NavRightSide = styled.div`
     line-height: 21px;
     color: #ffffff;
     > span {
-  display: block;
-}
+      display: block;
+    }
     > img {
       display: none;
     }
@@ -100,26 +102,50 @@ const Copyright = styled.label`
 `;
 
 const CreditCardCheckout = () => {
+  const [page, setPage] = useState(1);
+
+  const clickNext = () => {
+    console.log('clickNext page before', page);
+    if (page !== 3)
+      console.log('setting page to page:  ', page + 1);
+    setPage(page + 1);
+  };
+
+  const clickBack = () => {
+    console.log('clickNext page before', page);
+    if (page !== 1)
+      console.log('setting page to page:  ', page - 1);
+    setPage(page - 1);
+  };
+
+  const pageContext = {
+    page: page,
+    clickBack: clickBack,
+    clickNext: clickNext
+  }
+
   return (
-    <Container>
-      <NavBar>
-        <span>DailyUI_002</span>
-        <NavRightSide>
-          <span>Product</span>
-          <span>Contact</span>
-          <span>About</span>
-          <img src="/images/hamburger.svg" />
-        </NavRightSide>
-      </NavBar>
-      <CreditCardCheckoutContainer />
-      <Footer>
-        <Copyright>© 2022 DailyUI_002. All rights reserved.</Copyright>
-        <FooterRightSide>
-          <span>About</span>
-          <span>Contact us</span>
-        </FooterRightSide>
-      </Footer>
-    </Container>
+    <CreditCardCheckoutContext.Provider value={pageContext}>
+      <Container>
+        <NavBar>
+          <span>DailyUI_002</span>
+          <NavRightSide>
+            <span>Product</span>
+            <span>Contact</span>
+            <span>About</span>
+            <img src='/images/hamburger.svg' />
+          </NavRightSide>
+        </NavBar>
+        <CreditCardCheckoutContainer />
+        <Footer>
+          <Copyright>© 2022 DailyUI_002. All rights reserved.</Copyright>
+          <FooterRightSide>
+            <span>About</span>
+            <span>Contact us</span>
+          </FooterRightSide>
+        </Footer>
+      </Container>
+    </CreditCardCheckoutContext.Provider>
   );
 };
 
