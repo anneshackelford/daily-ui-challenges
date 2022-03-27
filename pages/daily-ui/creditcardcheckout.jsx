@@ -1,7 +1,6 @@
-import { MouseEventHandler, useState } from 'react';
 import styled, { css } from 'styled-components';
 import CreditCardCheckoutContainer from '../../components/CreditCardCheckout/CreditCardCheckoutContainer';
-import CreditCardCheckoutContext from '../../components/CreditCardCheckoutContext';
+import { CreditCardCheckoutProvider } from '../../components/CreditCardCheckoutProvider';
 
 const Container = styled.div`
   display: flex;
@@ -102,30 +101,9 @@ const Copyright = styled.label`
 `;
 
 const CreditCardCheckout = () => {
-  const [page, setPage] = useState(1);
-
-  const clickNext = () => {
-    console.log('clickNext page before', page);
-    if (page !== 3)
-      console.log('setting page to page:  ', page + 1);
-    setPage(page + 1);
-  };
-
-  const clickBack = () => {
-    console.log('clickNext page before', page);
-    if (page !== 1)
-      console.log('setting page to page:  ', page - 1);
-    setPage(page - 1);
-  };
-
-  const pageContext = {
-    page: page,
-    clickBack: clickBack,
-    clickNext: clickNext
-  }
 
   return (
-    <CreditCardCheckoutContext.Provider value={pageContext}>
+    <CreditCardCheckoutProvider>
       <Container>
         <NavBar>
           <span>DailyUI_002</span>
@@ -145,7 +123,7 @@ const CreditCardCheckout = () => {
           </FooterRightSide>
         </Footer>
       </Container>
-    </CreditCardCheckoutContext.Provider>
+      </CreditCardCheckoutProvider>
   );
 };
 

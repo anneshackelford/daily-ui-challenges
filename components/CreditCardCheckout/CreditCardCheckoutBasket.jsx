@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Image from 'next/image';
 import { MouseEventHandler } from 'react';
 import styled, { css } from 'styled-components';
-import CreditCardCheckoutContext from '../CreditCardCheckoutContext';
+import {CreditCardCheckoutContext} from '../CreditCardCheckoutProvider';
 import BackIcon from '../icons/BackIcon';
 import NextIcon from '../icons/NextIcon';
 

@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
-import CreditCardCheckoutContext from '../CreditCardCheckoutContext';
+import {CreditCardCheckoutContext} from '../CreditCardCheckoutProvider';
 import CreditCardCheckoutBasket from './CreditCardCheckoutBasket';
 import CreditCardCheckoutInformation from './CreditCardCheckoutInformation';
 
@@ -113,7 +113,7 @@ const CreditCardCheckoutContainer = () => {
       </Progress>
       <OrderContainer>
         <CreditCardCheckoutInformation />
-        <CreditCardCheckoutBasket />
+        <CreditCardCheckoutBasket  />
       </OrderContainer>
     </Main>
   );
