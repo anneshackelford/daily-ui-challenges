@@ -14,9 +14,6 @@ const Basket = styled.div`
   @media screen and (min-width: 1700px) {
   }
 `;
-// interface Props {
-//   page: number;
-// }
 
 const ButtonMixin = css`
   width: 117px;
