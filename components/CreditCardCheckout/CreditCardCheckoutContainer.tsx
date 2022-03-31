@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
-import {CreditCardCheckoutContext} from '../CreditCardCheckoutProvider';
+import { CreditCardCheckoutContext } from '../CreditCardCheckoutProvider';
 import CreditCardCheckoutBasket from './CreditCardCheckoutBasket';
-import CreditCardCheckoutInformation from './CreditCardCheckoutInformation';
+import CreditCardCheckoutSteps from './CreditCardCheckoutSteps';
 
 const Main = styled.main`
   display: flex;
@@ -112,8 +112,8 @@ const CreditCardCheckoutContainer = () => {
         </ProgressText>
       </Progress>
       <OrderContainer>
-        <CreditCardCheckoutInformation />
-        <CreditCardCheckoutBasket  />
+        <CreditCardCheckoutSteps />
+        <CreditCardCheckoutBasket />
       </OrderContainer>
     </Main>
   );

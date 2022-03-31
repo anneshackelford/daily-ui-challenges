@@ -35,6 +35,9 @@ const Form = styled.div`
   column-gap: 16px;
   row-gap: 21px;
   justify-content: left;
+  @media screen and (min-width: 1200px) {
+  width: 993px;;
+  }
 `;
 
 const Label = styled.label`
@@ -55,7 +58,23 @@ const InputMixin = css`
   background-color: transparent;
   margin-top: 8px;
   @media screen and (min-width: 540px) {
+    width: 322px;
+  }
+`;
+
+const InputMixinWide = css`
+  height: 55px;
+  width: 240px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 8px;
+  @media screen and (min-width: 540px) {
     width: 323px;
+  }
+  @media screen and (min-width: 730px) {
+    width: 656px;
   }
 `;
 
@@ -63,8 +82,18 @@ const Input = styled.input`
   ${InputMixin}
 `;
 
+const InputWide = styled.input`
+  ${InputMixinWide}
+`;
+
 const SelectedInput = styled.input`
   ${InputMixin}
+  background: rgba(44, 121, 165, 0.05);
+  border: 1.5px solid #2c79a5;
+`;
+
+const SelectedInputWide = styled.input`
+  ${InputMixinWide}
   background: rgba(44, 121, 165, 0.05);
   border: 1.5px solid #2c79a5;
 `;
@@ -82,7 +111,7 @@ const CityInput = styled.input`
   width: 235px;
 `;
 
-const ShippingButtonMixin = css`
+const ButtonMixin = css`
   width: 240px;
   height: 78px;
   border: 1.5px solid rgba(0, 0, 0, 0.2);
@@ -109,19 +138,46 @@ const ShippingButtonMixin = css`
 `;
 
 const ShippingButton = styled.div`
-  ${ShippingButtonMixin};
+  ${ButtonMixin};
   border: 1.5px solid #2c79a5;
   background: rgba(44, 121, 165, 0.05);
 `;
 
 const ExpressShippingButton = styled.div`
-  ${ShippingButtonMixin};
+  ${ButtonMixin};
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   background: transparent;
   color: rgba(0, 0, 0, 0.5);
+
 `;
 
-const ShippingButtons = styled.div`
+const CreditCardButton = styled.div`
+  ${ButtonMixin};
+  border: 1.5px solid #2c79a5;
+  background: rgba(44, 121, 165, 0.05);
+  width: fit-content;
+  align-items: center;
+  @media screen and (min-width: 540px) {
+    width: fit-content;
+    padding: 0 33px;
+    gap: 15px;
+  }
+`;
+
+const PayPalButton = styled.div`
+  ${ButtonMixin};
+  border: 1.5px solid #2c79a5;
+  background: rgba(44, 121, 165, 0.05);
+  width: fit-content;
+  align-items: center;
+  @media screen and (min-width: 540px) {
+    width: fit-content;
+        padding: 0 33px;
+        gap: 15px;
+  }
+`;
+
+const Buttons = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -154,20 +210,7 @@ const Mixin = css`
   }
 `;
 
-const PersonalDetails = styled.div`
-  ${Mixin};
-  padding: 52px 58px 56px;
-  gap: 25px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  @media screen and (min-width: 540px) {
-    padding: 52px 58px 56px;
-  }
-  @media screen and (min-width: 1300px) {
-    padding: 52px 0 56px;
-    gap: 96px;
-    width: 892px;
-  }
-`;
+
 
 const ShippingInformation = styled.div`
   ${Mixin};
@@ -202,29 +245,57 @@ const ShippingMethod = styled.div`
   }
 `;
 
-const Page2 = styled.div<Props>`
-  display: ${(props) => (props.display ? 'block' : 'none')};
+const PersonalDetails = styled.div`
+  ${Mixin};
+  padding: 52px 58px 56px;
+  gap: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 540px) {
+    padding: 52px 58px 56px;
+  }
+  @media screen and (min-width: 1300px) {
+    padding: 52px 0 56px;
+    gap: 96px;
+    width: 892px;
+  }
 `;
-const Page3 = styled.div<Props>`
-  display: ${(props) => (props.display ? 'block' : 'none')};
+
+const PaymentMethod = styled.div`
+  ${Mixin};
+  margin: 52px 40px 0;
+  gap: 25px;
+  justify-content: left;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 540px) {
+    margin: 52px 58px 0;
+  }
+  @media screen and (min-width: 1300px) {
+    gap: 87.04px;
+    margin: 52px 58px 0;
+    width: 892px;
+  }
 `;
 
 export {
   Label,
   SelectedInput,
+  SelectedInputWide,
   Input,
+  InputWide,
   ShippingInformation,
   ZipCodeInput,
   CityInput,
   CountryInput,
   ShippingMethod,
-  ShippingButtons,
+  PaymentMethod,
+  Buttons,
   ShippingButton,
   ExpressShippingButton,
   Information,
   PersonalDetails,
   Group,
   Form,
-  Page2,
-  Page3,
+  CreditCardButton,
+  PayPalButton
 };

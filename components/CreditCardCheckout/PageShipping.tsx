@@ -1,4 +1,7 @@
+import { useContext } from 'react';
+import { CreditCardCheckoutContext } from '../CreditCardCheckoutProvider';
 import {
+  Buttons,
   CityInput,
   CountryInput,
   ExpressShippingButton,
@@ -10,14 +13,15 @@ import {
   PersonalDetails,
   SelectedInput,
   ShippingButton,
-  ShippingButtons,
   ShippingInformation,
   ShippingMethod,
   ZipCodeInput,
 } from './styles';
 
-const Page1 = ({ display }: { display: boolean }) => {
-  console.log('page1', display);
+const PageShipping = () => {
+  const { page } = useContext(CreditCardCheckoutContext);
+  const display = page === 1;
+
   return (
     <Information display={display}>
       <PersonalDetails>
@@ -68,7 +72,7 @@ const Page1 = ({ display }: { display: boolean }) => {
       </ShippingInformation>
       <ShippingMethod>
         <h2>Shipping&nbsp;method</h2>
-        <ShippingButtons>
+        <Buttons>
           <ShippingButton>
             <span>Standard shipping</span>
             <span>
@@ -81,10 +85,10 @@ const Page1 = ({ display }: { display: boolean }) => {
               <b>9,95€</b>
             </span>
           </ExpressShippingButton>
-        </ShippingButtons>
+        </Buttons>
       </ShippingMethod>
     </Information>
   );
 };
 
-export default Page1;
+export default PageShipping;
