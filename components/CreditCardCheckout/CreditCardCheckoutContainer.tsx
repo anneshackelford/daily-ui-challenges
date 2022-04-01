@@ -66,19 +66,16 @@ const OrderContainer = styled.div`
   }
 `;
 
-const Page1ImageDark = styled.img<{ page: number }>`
-  display: ${(props) => (props.page === 1 ? 'block' : 'none')};
+const Page1ImageDark = styled.img`
+  display: block;
 `;
 
-const Page1ImageLight = styled.img<{ page: number }>`
-  display: ${(props) => (props.page !== 1 ? 'block' : 'none')};
-`;
 const Page2ImageDark = styled.img<{ page: number }>`
-  display: ${(props) => (props.page === 2 ? 'block' : 'none')};
+  display: ${(props) => (props.page === 2 || props.page === 3 ? 'block' : 'none')};
 `;
 
 const Page2ImageLight = styled.img<{ page: number }>`
-  display: ${(props) => (props.page !== 2 ? 'block' : 'none')};
+  display: ${(props) => (props.page === 1 ? 'block' : 'none')};
 `;
 const Page3ImageDark = styled.img<{ page: number }>`
   display: ${(props) => (props.page === 3 ? 'block' : 'none')};
@@ -96,8 +93,8 @@ const CreditCardCheckoutContainer = () => {
       <h1>We&apos;re almost there</h1>
       <Progress>
         <Images>
-          <Page1ImageDark src='/images/ellipseDark.svg' page={page} />
-          <Page1ImageLight src='/images/ellipseLight.svg' page={page} />
+          <Page1ImageDark src='/images/ellipseDark.svg'  />
+
           <Line />
           <Page2ImageDark src='/images/ellipseDark.svg' page={page} />
           <Page2ImageLight src='/images/ellipseLight.svg' page={page} />

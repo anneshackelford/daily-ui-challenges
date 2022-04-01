@@ -9,6 +9,7 @@ import {
   Input,
   InputWide,
   Label,
+  PaymentInformation,
   PaymentMethod,
   PayPalButton,
   SelectedInputWide,
@@ -20,7 +21,7 @@ const PagePayment = () => {
   const display = page === 2;
 
   return (
-    <Information display={display}>
+    <Information display={display} page={page}>
       <PaymentMethod>
         <h2>Payment&nbsp;method</h2>
         <Buttons>
@@ -41,7 +42,7 @@ const PagePayment = () => {
           </PayPalButton>
         </Buttons>
       </PaymentMethod>
-      <ShippingInformation>
+      <PaymentInformation>
         <h2>Payment&nbsp;information</h2>
         <Form>
           <Group>
@@ -61,7 +62,7 @@ const PagePayment = () => {
             <Input />
           </Group>
         </Form>
-      </ShippingInformation>
+      </PaymentInformation>
     </Information>
   );
 };

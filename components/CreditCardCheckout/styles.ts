@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface Props {
   display: boolean;
+  page?: number;
 }
 
 const Information = styled.div<Props>`
@@ -9,6 +10,7 @@ const Information = styled.div<Props>`
   width: 100%;
   background: rgba(248, 248, 248, 0.6);
   border-radius: 20px;
+  height: ${(props) => (props.page === 2 ? '586.29px' : 'unset')};
 
   > h2 {
     font-family: 'Ubuntu';
@@ -229,6 +231,56 @@ const ShippingInformation = styled.div`
   }
 `;
 
+const PaymentInformation = styled.div`
+  ${Mixin};
+  margin: 52px 40px 0;
+  padding-bottom: 56px;
+
+  gap: 25px;
+  justify-content: center;
+  @media screen and (min-width: 540px) {
+    margin: 52px 58px 0;
+  }
+  @media screen and (min-width: 1300px) {
+    gap: 53px;
+    width: 892px;
+  }
+`;
+
+const PaymentInformationOrdering = styled.div`
+  ${Mixin};
+  margin: 52px 40px 0;
+  padding-bottom: 56px;
+  gap: 25px;
+  justify-content: center;
+  @media screen and (min-width: 540px) {
+    margin: 52px 58px 0;
+  }
+  @media screen and (min-width: 1300px) {
+    gap: 53px;
+    width: 892px;  
+    justify-content: space-between ;
+  }
+`;
+
+const PaymentInformationOrderingAddress = styled.div`
+  ${Mixin};
+  margin: 52px 40px 0;
+  padding-bottom: 56px;
+  gap: 25px;
+  justify-content: center;
+  @media screen and (min-width: 540px) {
+    margin: 52px 58px 0;
+  }
+  @media screen and (min-width: 1300px) {
+    gap: 0;
+    padding: 0;
+    margin: -40px 40px 59px;
+    width: 892px;  
+    justify-content: space-between ;
+  }
+`;
+
 const ShippingMethod = styled.div`
   ${Mixin};
   margin: 52px 40px 0;
@@ -277,6 +329,67 @@ const PaymentMethod = styled.div`
   }
 `;
 
+const Content = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+gap: 16.75px;
+`;
+
+const SelectedInputWideDeep = styled.div`
+  ${InputMixinWide}
+  background: rgba(44, 121, 165, 0.05);
+  border: 1.5px solid #2c79a5;
+  position: relative;
+  height: 78px;
+  > span {
+    position: absolute;
+    top: 26px;
+    right: 33px;
+  }
+`;
+
+const SelectedInputWideDeepAddress = styled.div`
+  ${InputMixinWide}
+  background: rgba(44, 121, 165, 0.05);
+  border: 1.5px solid #2c79a5;
+  position: relative;
+  height: 144px;
+`;
+
+const FieldValue = styled.div`
+position: absolute;
+top: 30px;
+left: 32px;
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 18px;
+color: rgba(0, 0, 0, 0.5);
+`;
+
+const FieldValueAddress = styled.div`
+position: absolute;
+top: 25px;
+left: 32px;
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 18px;
+color: rgba(0, 0, 0, 0.5);
+> p {
+  margin: 7px 0 0;
+  text-align: left;
+  :first-of-type {
+    font-weight: 400;
+    margin-top: 0;
+  }
+}
+`;
+
+
 export {
   Label,
   SelectedInput,
@@ -297,5 +410,13 @@ export {
   Group,
   Form,
   CreditCardButton,
-  PayPalButton
+  PayPalButton,
+  PaymentInformation,
+  PaymentInformationOrdering,
+  Content,
+  FieldValue,
+  SelectedInputWideDeep,
+  SelectedInputWideDeepAddress,
+  FieldValueAddress,
+  PaymentInformationOrderingAddress
 };
