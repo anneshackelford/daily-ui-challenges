@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { CreditCardCheckoutContext } from '../CreditCardCheckoutProvider';
 import {
   Content,
-  Field,
   FieldValue,
   FieldValueAddress,
   Form,
