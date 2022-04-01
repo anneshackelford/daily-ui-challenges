@@ -10,7 +10,6 @@ const Information = styled.div<Props>`
   width: 100%;
   background: rgba(248, 248, 248, 0.6);
   border-radius: 20px;
-  height: ${(props) => (props.page === 2 ? '586.29px' : 'unset')};
 
   > h2 {
     font-family: 'Ubuntu';
@@ -27,6 +26,7 @@ const Information = styled.div<Props>`
     justify-content: space-between;
     align-items: center;
     width: 1010px;
+    height: ${(props) => (props.page === 2 ? '586.29px' : 'unset')};
   }
 `;
 
@@ -269,8 +269,11 @@ const PaymentInformationOrderingAddress = styled.div`
   padding-bottom: 56px;
   gap: 25px;
   justify-content: center;
+
   @media screen and (min-width: 540px) {
-    margin: 52px 58px 0;
+    gap: 0;
+    padding: 0;
+    margin: -40px 40px 59px;
   }
   @media screen and (min-width: 1300px) {
     gap: 0;
@@ -331,9 +334,16 @@ const PaymentMethod = styled.div`
 
 const Content = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: flex-end;
 gap: 16.75px;
+@media screen and (min-width: 1300px) {
+  flex-direction: column;
+align-items: flex-end;
+    gap: 87.04px;
+    margin: 52px 58px 0;
+    width: 892px;
+  }
 `;
 
 const SelectedInputWideDeep = styled.div`

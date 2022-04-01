@@ -22,7 +22,7 @@ const PageOrdering = () => {
   const display = page === 3;
 
   return (
-    <Information display={display}>
+    <Information display={display} page={page}>
       <PaymentInformationOrdering>
         <h2>Payment&nbsp;information</h2>
         <Content>
