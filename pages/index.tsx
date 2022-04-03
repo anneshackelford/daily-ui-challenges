@@ -203,7 +203,7 @@ const Home: NextPage = () => {
             <Divider />
             <Right>
               <LargeLabel>count</LargeLabel>
-              <LargeLabelStrong>002</LargeLabelStrong>
+              <LargeLabelStrong>003</LargeLabelStrong>
             </Right>
           </BottomRow>
         </Header>
@@ -226,6 +226,16 @@ const Home: NextPage = () => {
                 color={'#546f50'}
                 number={'001'}
                 name='Sign Up'
+              />
+            </a>
+          </Link>
+          <Link href='/daily-ui/landingpage' passHref>
+            <a>
+              <DailyUI
+                backgroundColor={'transparent'}
+                color={'transparent'}
+                number={''}
+                name=''
               />
             </a>
           </Link>

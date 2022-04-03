@@ -8,7 +8,7 @@ interface DailyProps {
 const Daily = styled.div<DailyProps>`
   height: 100%;
   background-color: ${(props) => props.backgroundColor || 'none'};
-  border: 1px solid #ffffff;
+  border: 1px solid  ${(props) => props.color || 'none'};
   @media screen and (max-width: 600px) {
   }
 `;
@@ -61,16 +61,17 @@ export const DailyUI = ({
   name,
   color,
 }: DailyUIProps) => {
+
   return (
-    <Daily backgroundColor={backgroundColor}>
+    <Daily backgroundColor={backgroundColor} color={color}>
       <DailyContainer>
-        <Image
+        {number && <Image
           src={`/images/${number}.png`}
           alt={`Daily UI Challenge ${number} ${name}`}
           width={530}
           height={312}
           layout='responsive'
-        />
+        />}
         <DailyBottomRow>
           <DailyLabel color={color}>{name}</DailyLabel>
           <DailyLabel color={color}>{number}</DailyLabel>

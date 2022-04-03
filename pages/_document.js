@@ -11,9 +11,13 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
-          <link rel='preconnect' href='https://fonts.gstatic.com'  />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
-            href='https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@300;400;500;700&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@300;400;500;600;700&display=swap'
+            rel='stylesheet'
+          />
+          <link
+            href='http://fonts.cdnfonts.com/css/segoe-ui-variable'
             rel='stylesheet'
           />
         </Head>
