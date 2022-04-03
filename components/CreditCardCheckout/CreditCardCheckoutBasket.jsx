@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Image from 'next/image';
 import { MouseEventHandler } from 'react';
 import styled, { css } from 'styled-components';
-import {CreditCardCheckoutContext} from '../CreditCardCheckoutProvider';
+import { CreditCardCheckoutContext } from '../CreditCardCheckoutProvider';
 import BackIcon from '../icons/BackIcon';
 import NextIcon from '../icons/NextIcon';
 
@@ -11,6 +11,13 @@ const Basket = styled.div`
   flex-direction: column;
   align-items: flex-end;
   align-self: stretch;
+  gap: 15px;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
   @media screen and (min-width: 1700px) {
   }
 `;
@@ -229,8 +236,16 @@ const Total = styled.div`
 `;
 
 const Title = styled.div`
-  margin: 0 54px;
+  margin: 0 40px;
+  @media screen and (min-width: 540px) {
+    margin: 0 54px;
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
 `;
+
 
 const Buttons = styled.div`
   display: flex;

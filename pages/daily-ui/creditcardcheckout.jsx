@@ -37,7 +37,7 @@ const NavRightSide = styled.div`
     display: block;
   }
 
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 730px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { CreditCardCheckoutContext } from '../CreditCardCheckoutProvider';
 import CreditCardCheckoutBasket from './CreditCardCheckoutBasket';
@@ -87,6 +87,9 @@ const Page3ImageLight = styled.img<{ page: number }>`
 
 const CreditCardCheckoutContainer = () => {
   const { page } = useContext(CreditCardCheckoutContext);
+  useEffect(()=>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, [page])
 
   return (
     <Main>
@@ -94,7 +97,6 @@ const CreditCardCheckoutContainer = () => {
       <Progress>
         <Images>
           <Page1ImageDark src='/images/ellipseDark.svg'  />
-
           <Line />
           <Page2ImageDark src='/images/ellipseDark.svg' page={page} />
           <Page2ImageLight src='/images/ellipseLight.svg' page={page} />
