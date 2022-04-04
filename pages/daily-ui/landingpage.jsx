@@ -1,15 +1,32 @@
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
 
+const Layout = styled.div`
+  background-color: #ededed;
+  height: 100vh;
+`;
+
+const B = styled.div`
+  /* z-index: 100; */
+  /* border: 1px solid black; */
+  /* z-index: 100 */
+  position: absolute;
+  top: 754px;
+  /* height: 252px; */
+`;
+
+const C = styled.div``;
 
 const BackgroundWrap = styled.div`
   position: relative;
-  /* height: 992px; */
+  height: 992px;
 `;
 const Background2Wrap = styled.div`
   position: relative;
-  /* height: 252px; */
-  margin-top: -236px;
+  height: 252px;
+  width: 100vw;
+  /* margin-top: -236px; */
+  /* background-position: bottom; */
 `;
 
 const Overlay = styled.div`
@@ -43,7 +60,6 @@ const Overlay = styled.div`
   @media screen and (min-width: 1700px) {
     max-width: 1520px;
   }
-
 `;
 
 const NavBar = styled.nav`
@@ -182,36 +198,35 @@ const template = styled.div`
   }
 `;
 
-
-
 const LandingPage = () => {
   return (
-    <>
+    <Layout>
       <BackgroundWrap>
         <Image
           src='/images/landingPage/background.png'
           alt='forest background image'
-          // layout='fill'
+          layout='fill'
           // objectFit='cover'
           // objectPosition={'26%'}
           height='992'
           width='1920'
           priority
         />
-                
       </BackgroundWrap>
-      <Background2Wrap>
-        <Image
-          src='/images/landingPage/background2.png'
-          alt='forest background image'
-          // layout='fill'
-          // objectFit='cover'
-          // objectPosition={'754px'}
-          height='252'
-          width='1920'
-          priority
-        />
-      </Background2Wrap>
+      <B>
+        <Background2Wrap>
+          <Image
+            src='/images/landingPage/background2.png'
+            alt='forest background image'
+            layout='fill'
+            // objectFit='cover'
+            // objectPosition={'bottom'}
+            height='252'
+            width='1920'
+            priority
+          />
+        </Background2Wrap>
+      </B>
       <Overlay>
         <NavBar>
           <Left>
@@ -233,7 +248,7 @@ const LandingPage = () => {
         <Main></Main>
         <Footer></Footer>
       </Overlay>
-    </>
+    </Layout>
   );
 };
 
