@@ -203,7 +203,7 @@ const Home: NextPage = () => {
             <Divider />
             <Right>
               <LargeLabel>count</LargeLabel>
-              <LargeLabelStrong>003</LargeLabelStrong>
+              <LargeLabelStrong>002</LargeLabelStrong>
             </Right>
           </BottomRow>
         </Header>

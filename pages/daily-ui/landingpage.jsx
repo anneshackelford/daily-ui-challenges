@@ -5,28 +5,20 @@ const Layout = styled.div`
   background-color: #ededed;
   height: 100vh;
 `;
-
-const B = styled.div`
-  /* z-index: 100; */
-  /* border: 1px solid black; */
-  /* z-index: 100 */
-  position: absolute;
-  top: 754px;
-  /* height: 252px; */
-`;
-
-const C = styled.div``;
-
 const BackgroundWrap = styled.div`
   position: relative;
   height: 992px;
 `;
-const Background2Wrap = styled.div`
+
+const TransitionWrapAbsolute = styled.div`
+  position: absolute;
+  top: 754px;
+`;
+
+const TransitionWrapRelative = styled.div`
   position: relative;
   height: 252px;
   width: 100vw;
-  /* margin-top: -236px; */
-  /* background-position: bottom; */
 `;
 
 const Overlay = styled.div`
@@ -38,8 +30,9 @@ const Overlay = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   max-width: 340px;
+  width: 100vw;
 
   font-family: 'Segoe UI';
   font-style: normal;
@@ -63,13 +56,14 @@ const Overlay = styled.div`
 `;
 
 const NavBar = styled.nav`
-  border: 1px solid white;
+  border: 1px solid black;
   height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  margin: 0 auto;
   padding: 59px 0;
   p {
     margin: 0px;
@@ -79,6 +73,7 @@ const NavBar = styled.nav`
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
+    max-width: 1520px;
   }
 `;
 
@@ -158,7 +153,62 @@ const StyledButton = styled.button`
   }
 `;
 
-const Header = styled.div`
+const Header = styled.header`
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+    gap: 315px;
+  }
+`;
+
+const TextSection = styled.section`
+  border: 1px solid black;
+
+  > h1 {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 42px;
+    line-height: 96px;
+    color: #0c0c0c;
+    > strong {
+      font-weight: 600;
+    }
+  }
+  > h2 {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+  }
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+    > h1 {
+      font-size: 72px;
+      line-height: 96px;
+    }
+    > h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+`;
+
+const ImageSection = styled.section`
+  border: 1px solid black;
+  width: 204px;
+
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -167,8 +217,13 @@ const Header = styled.div`
   }
 `;
 
+const ScissorsBackgroundWrap = styled.div`
+  position: relative;
+  /* height: 992px; */
+`;
+
 const Main = styled.main`
-  border: 1px solid white;
+  border: 1px solid black;
   height: 300px;
   @media screen and (min-width: 540px) {
   }
@@ -204,7 +259,7 @@ const LandingPage = () => {
       <BackgroundWrap>
         <Image
           src='/images/landingPage/background.png'
-          alt='forest background image'
+          alt='pastel background image'
           layout='fill'
           // objectFit='cover'
           // objectPosition={'26%'}
@@ -213,11 +268,11 @@ const LandingPage = () => {
           priority
         />
       </BackgroundWrap>
-      <B>
-        <Background2Wrap>
+      <TransitionWrapAbsolute>
+        <TransitionWrapRelative>
           <Image
             src='/images/landingPage/background2.png'
-            alt='forest background image'
+            alt='transition background image'
             layout='fill'
             // objectFit='cover'
             // objectPosition={'bottom'}
@@ -225,8 +280,8 @@ const LandingPage = () => {
             width='1920'
             priority
           />
-        </Background2Wrap>
-      </B>
+        </TransitionWrapRelative>
+      </TransitionWrapAbsolute>
       <Overlay>
         <NavBar>
           <Left>
@@ -244,7 +299,29 @@ const LandingPage = () => {
             </StyledButton>
           </Right>
         </NavBar>
-        <Header></Header>
+        <Header>
+          <TextSection>
+            <h1>
+              Your style, <strong>your hair</strong>
+            </h1>
+            <h2>A change to be relaxed and come out looking fresh</h2>
+            <StyledButton>book appointment</StyledButton>
+          </TextSection>
+          <ImageSection>
+            <ScissorsBackgroundWrap>
+              <Image
+                src='/images/landingPage/scissorsBackground.png'
+                alt='blob background'
+                // layout='fill'
+                // objectFit='cover'
+                // objectPosition={'26%'}
+                height='556'
+                width='581'
+                priority
+              />
+            </ScissorsBackgroundWrap>
+          </ImageSection>
+        </Header>
         <Main></Main>
         <Footer></Footer>
       </Overlay>
