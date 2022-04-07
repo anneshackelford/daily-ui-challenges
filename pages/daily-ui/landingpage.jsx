@@ -31,7 +31,8 @@ const Overlay = styled.div`
   flex-direction: column;
   align-items: center;
   /* margin: 0 auto; */
-  max-width: 340px;
+  /* max-width: 340px; */
+  max-width: 80%;
   width: 100vw;
 
   font-family: 'Segoe UI';
@@ -42,13 +43,14 @@ const Overlay = styled.div`
   color: #000000;
 
   @media screen and (min-width: 540px) {
-    max-width: 500px;
+    /* max-width: 500px; */
+    /* max-width: none; */
   }
   @media screen and (min-width: 730px) {
-    max-width: 650px;
+    /* max-width: 650px; */
   }
   @media screen and (min-width: 1300px) {
-    max-width: 1100px;
+    /* max-width: 1100px; */
   }
   @media screen and (min-width: 1700px) {
     max-width: 1520px;
@@ -62,6 +64,7 @@ const NavBar = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  /* max-width: 80%; */
   align-items: center;
   margin: 0 auto;
   padding: 59px 0;
@@ -97,21 +100,21 @@ const Left = styled.div`
 const Middle = styled.div`
   /* border: 1px solid white; */
   display: none;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 45px;
   font-family: 'Segoe UI Variable';
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   @media screen and (min-width: 540px) {
-    display: flex;
-    font-size: 18px;
   }
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 45px;
+    font-size: 18px;
   }
 `;
 
@@ -162,6 +165,7 @@ const HeaderButton = styled.button`
   ${StyledButtonMixin}
   background: rgba(255, 255, 255, 0.3);
   margin-top: 45px;
+  color: black;
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -174,22 +178,27 @@ const HeaderButton = styled.button`
 
 const Header = styled.header`
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
   /* border: 1px solid black; */
   width: 100%;
+  /* max-width: 80%; */
   margin-top: 24px;
   align-items: center;
+  gap: 50px;
 
   @media screen and (min-width: 540px) {
+    gap: 100px;
   }
   @media screen and (min-width: 730px) {
+    flex-direction: row;
   }
   @media screen and (min-width: 1300px) {
     /* gap: 302px; */
   }
   @media screen and (min-width: 1700px) {
     max-width: 1520px;
+    flex-direction: row;
   }
 `;
 
@@ -204,11 +213,12 @@ const TextSection = styled.section`
     font-style: normal;
     font-weight: 350;
     font-size: 42px;
-    line-height: 96px;
+    line-height: 120%;
     color: #0c0c0c;
     margin: 0;
     > strong {
       font-weight: 600;
+      white-space: nowrap;
     }
   }
   > h2 {
@@ -220,7 +230,7 @@ const TextSection = styled.section`
     color: #000000;
     margin: 0;
     margin-top: 33px;
-    width: 380px;
+    max-width: 380px;
   }
   @media screen and (min-width: 540px) {
   }
@@ -228,6 +238,7 @@ const TextSection = styled.section`
   }
   @media screen and (min-width: 1300px) {
     /* margin-top: 140px; */
+    max-width: 60%;
     > h1 {
       font-size: 72px;
       line-height: 96px;
@@ -241,11 +252,13 @@ const TextSection = styled.section`
 
 const ImageSection = styled.section`
   /* border: 1px solid black; */
-  height: 554px;
+  /* height: 554px; */
   display: flex;
   align-items: center;
+  /* min-width: 30%; */
 
   @media screen and (min-width: 540px) {
+    max-width: 50%;
   }
   @media screen and (min-width: 730px) {
   }
@@ -276,9 +289,10 @@ const ScissorsWrapRelative = styled.div`
 `;
 
 const Main = styled.main`
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 300px;
   width: 100%;
+  margin-top: 105px;
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
