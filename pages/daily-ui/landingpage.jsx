@@ -56,7 +56,7 @@ const Overlay = styled.div`
 `;
 
 const NavBar = styled.nav`
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -78,7 +78,7 @@ const NavBar = styled.nav`
 `;
 
 const Left = styled.div`
-  border: 1px solid white;
+  /* border: 1px solid white; */
   font-family: 'Segoe UI Variable';
   font-style: normal;
   font-weight: 600;
@@ -95,7 +95,7 @@ const Left = styled.div`
 `;
 
 const Middle = styled.div`
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: none;
   flex-direction: row;
   justify-content: space-evenly;
@@ -116,7 +116,7 @@ const Middle = styled.div`
 `;
 
 const Right = styled.div`
-  border: 1px solid white;
+  /* border: 1px solid white; */
 
   @media screen and (min-width: 540px) {
   }
@@ -126,7 +126,7 @@ const Right = styled.div`
   }
 `;
 
-const StyledButton = styled.button`
+const StyledButtonMixin = css`
   width: fit-content;
   padding: 0 20px;
   height: 50px;
@@ -139,6 +139,7 @@ const StyledButton = styled.button`
   line-height: 21px;
   color: #ffffff;
   border-radius: 50px;
+  border: none;
   > p {
     margin: 0;
   }
@@ -153,22 +154,50 @@ const StyledButton = styled.button`
   }
 `;
 
+const NavbarButton = styled.button`
+  ${StyledButtonMixin}
+`;
+
+const HeaderButton = styled.button`
+  ${StyledButtonMixin}
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 45px;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
+`;
+
 const Header = styled.header`
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 100%;
+  margin-top: 24px;
+  align-items: center;
 
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
-    gap: 315px;
+    /* gap: 302px; */
+  }
+  @media screen and (min-width: 1700px) {
+    max-width: 1520px;
   }
 `;
 
 const TextSection = styled.section`
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
 
   > h1 {
     font-family: 'Segoe UI';
@@ -177,6 +206,7 @@ const TextSection = styled.section`
     font-size: 42px;
     line-height: 96px;
     color: #0c0c0c;
+    margin: 0;
     > strong {
       font-weight: 600;
     }
@@ -188,12 +218,16 @@ const TextSection = styled.section`
     font-size: 24px;
     line-height: 32px;
     color: #000000;
+    margin: 0;
+    margin-top: 33px;
+    width: 380px;
   }
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
+    /* margin-top: 140px; */
     > h1 {
       font-size: 72px;
       line-height: 96px;
@@ -206,8 +240,10 @@ const TextSection = styled.section`
 `;
 
 const ImageSection = styled.section`
-  border: 1px solid black;
-  width: 204px;
+  /* border: 1px solid black; */
+  height: 554px;
+  display: flex;
+  align-items: center;
 
   @media screen and (min-width: 540px) {
   }
@@ -219,23 +255,30 @@ const ImageSection = styled.section`
 
 const ScissorsBackgroundWrap = styled.div`
   position: relative;
-  /* height: 992px; */
+`;
+
+const ScissorsWrapAbsolute = styled.div`
+  position: absolute;
+  /* width: fit-content; */
+  /* width: 120%; */
+  /* width: 600px; */
+  /* top: 0; */
+  /* height: 100%; */
+`;
+
+const ScissorsWrapRelative = styled.div`
+  position: relative;
+  margin-top: 25%;
+  /* width: 600px; */
+  /* width: fit-content; */
+  /* height: 450px; */
+  /* width: 100%; */
 `;
 
 const Main = styled.main`
   border: 1px solid black;
   height: 300px;
-  @media screen and (min-width: 540px) {
-  }
-  @media screen and (min-width: 730px) {
-  }
-  @media screen and (min-width: 1300px) {
-  }
-`;
-
-const Footer = styled.footer`
-  border: 1px solid white;
-  height: 100px;
+  width: 100%;
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -294,9 +337,9 @@ const LandingPage = () => {
             <p>About</p>
           </Middle>
           <Right>
-            <StyledButton>
+            <NavbarButton>
               <p>book appointment</p>
-            </StyledButton>
+            </NavbarButton>
           </Right>
         </NavBar>
         <Header>
@@ -305,7 +348,7 @@ const LandingPage = () => {
               Your style, <strong>your hair</strong>
             </h1>
             <h2>A change to be relaxed and come out looking fresh</h2>
-            <StyledButton>book appointment</StyledButton>
+            <HeaderButton>book appointment</HeaderButton>
           </TextSection>
           <ImageSection>
             <ScissorsBackgroundWrap>
@@ -314,16 +357,29 @@ const LandingPage = () => {
                 alt='blob background'
                 // layout='fill'
                 // objectFit='cover'
-                // objectPosition={'26%'}
+                // objectPosition={'50% 50%'}
                 height='556'
                 width='581'
                 priority
               />
             </ScissorsBackgroundWrap>
+            <ScissorsWrapAbsolute>
+              <ScissorsWrapRelative>
+                <Image
+                  src='/images/landingPage/scissors.png'
+                  alt='scissors'
+                  // layout='fill'
+                  // objectFit='cover'
+                  // objectPosition={'bottom'}
+                  height='560'
+                  width='560'
+                  priority
+                />
+              </ScissorsWrapRelative>
+            </ScissorsWrapAbsolute>
           </ImageSection>
         </Header>
         <Main></Main>
-        <Footer></Footer>
       </Overlay>
     </Layout>
   );
