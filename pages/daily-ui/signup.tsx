@@ -171,7 +171,9 @@ const SignUp = () => {
         <OverlayBackground></OverlayBackground>
         <OverlayContents>
           <NavBar>
-            <Label>DailyUI_1</Label>
+            <Label>
+              <a href={'/'}>DailyUI_001</a>
+            </Label>
             <Group>
               <MenuItem>Product</MenuItem>
               <MenuItem>Contact</MenuItem>

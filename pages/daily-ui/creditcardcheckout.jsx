@@ -18,7 +18,7 @@ const NavBar = styled.nav`
   height: 105px;
   width: 85%;
 
-  > span {
+  > a {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 700;
@@ -101,12 +101,11 @@ const Copyright = styled.label`
 `;
 
 const CreditCardCheckout = () => {
-
   return (
     <CreditCardCheckoutProvider>
       <Container>
         <NavBar>
-          <span>DailyUI_002</span>
+          <a href={'/'}>DailyUI_002</a>
           <NavRightSide>
             <span>Product</span>
             <span>Contact</span>
@@ -123,7 +122,7 @@ const CreditCardCheckout = () => {
           </FooterRightSide>
         </Footer>
       </Container>
-      </CreditCardCheckoutProvider>
+    </CreditCardCheckoutProvider>
   );
 };
 

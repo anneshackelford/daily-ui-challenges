@@ -3,7 +3,14 @@ import Image from 'next/image';
 
 const Layout = styled.div`
   background-color: #ededed;
-  height: 100vh;
+  height: 3785px;
+  font-family: 'Segoe UI Variable';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #ededed;
 `;
 const BackgroundWrap = styled.div`
   position: relative;
@@ -34,9 +41,6 @@ const Overlay = styled.div`
   /* max-width: 340px; */
   max-width: 80%;
   width: 100vw;
-
-  font-family: 'Segoe UI';
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 24px;
@@ -82,8 +86,6 @@ const NavBar = styled.nav`
 
 const Left = styled.div`
   /* border: 1px solid white; */
-  font-family: 'Segoe UI Variable';
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -100,8 +102,6 @@ const Left = styled.div`
 const Middle = styled.div`
   /* border: 1px solid white; */
   display: none;
-  font-family: 'Segoe UI Variable';
-  font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -135,9 +135,7 @@ const StyledButtonMixin = css`
   height: 50px;
   background: #2ebdea;
   backdrop-filter: blur(10px);
-  font-family: 'Segoe UI Variable';
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
   line-height: 21px;
   color: #ffffff;
@@ -165,15 +163,14 @@ const HeaderButton = styled.button`
   ${StyledButtonMixin}
   background: rgba(255, 255, 255, 0.3);
   margin-top: 45px;
-  color: black;
-  @media screen and (min-width: 540px) {
-  }
-  @media screen and (min-width: 730px) {
-  }
-  @media screen and (min-width: 1300px) {
-  }
-  @media screen and (min-width: 1700px) {
-  }
+  color: white;
+`;
+
+const HaircutDescriptionButton = styled.button`
+  ${StyledButtonMixin}
+  margin-top: 80px;
+  color: white;
+  background: #ec9fff;
 `;
 
 const Header = styled.header`
@@ -183,7 +180,7 @@ const Header = styled.header`
   /* border: 1px solid black; */
   width: 100%;
   /* max-width: 80%; */
-  margin-top: 24px;
+  margin-top: 0;
   align-items: center;
   gap: 50px;
 
@@ -192,6 +189,7 @@ const Header = styled.header`
   }
   @media screen and (min-width: 730px) {
     flex-direction: row;
+    margin-top: 24px;
   }
   @media screen and (min-width: 1300px) {
     /* gap: 302px; */
@@ -209,8 +207,6 @@ const TextSection = styled.section`
   /* justify-content: center; */
 
   > h1 {
-    font-family: 'Segoe UI';
-    font-style: normal;
     font-weight: 350;
     font-size: 42px;
     line-height: 120%;
@@ -222,8 +218,6 @@ const TextSection = styled.section`
     }
   }
   > h2 {
-    font-family: 'Segoe UI';
-    font-style: normal;
     font-weight: 350;
     font-size: 24px;
     line-height: 32px;
@@ -236,8 +230,7 @@ const TextSection = styled.section`
   }
   @media screen and (min-width: 730px) {
   }
-  @media screen and (min-width: 1300px) {
-    /* margin-top: 140px; */
+  @media screen and (min-width: 1000px) {
     max-width: 60%;
     > h1 {
       font-size: 72px;
@@ -247,6 +240,8 @@ const TextSection = styled.section`
       font-size: 24px;
       line-height: 32px;
     }
+  }
+  @media screen and (min-width: 1300px) {
   }
 `;
 
@@ -258,9 +253,10 @@ const ImageSection = styled.section`
   /* min-width: 30%; */
 
   @media screen and (min-width: 540px) {
-    max-width: 50%;
+    max-width: 75%;
   }
   @media screen and (min-width: 730px) {
+    max-width: 50%;
   }
   @media screen and (min-width: 1300px) {
   }
@@ -281,18 +277,182 @@ const ScissorsWrapAbsolute = styled.div`
 
 const ScissorsWrapRelative = styled.div`
   position: relative;
-  margin-top: 25%;
+
   /* width: 600px; */
   /* width: fit-content; */
   /* height: 450px; */
   /* width: 100%; */
+  @media screen and (min-width: 540px) {
+    margin-top: 25%;
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
 `;
 
 const Main = styled.main`
   /* border: 1px solid black; */
-  height: 300px;
   width: 100%;
   margin-top: 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const HaircutsSection = styled.section`
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 180px;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const HaricutsIllustration = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px);
+  border-radius: 30px;
+  padding: 141px 83px;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const HaricutsDescription = styled.div`
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  > h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+  }
+  > p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;
+  }
+  > p:first-of-type {
+    margin-top: 84px;
+  }
+  > p:last-of-type {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const HaircutElement = styled.div`
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 52px;
+  /* padding: 0 83px; */
+
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const HaircutImage = styled.img`
+  /* border: 1px solid black; */
+  /* width: 285px;
+height: 285px; */
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const HaircutDescription = styled.div`
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: ${(props) => (props.textRight ? 'flex-start' : 'flex-end')};
+  > h1 {
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 48px;
+    color: #000000;
+    margin: 0;
+    white-space: nowrap;
+  }
+  > span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const ShopsSection = styled.section`
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 180px;
+  width: 100%;
+  height: 705px;
+  background: rgba(165, 219, 236, 0.5);
+  border-radius: 20px;
+
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+`;
+
+const BookSection = styled.section`
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 180px;
+  width: 100%;
+  height: 572px;
+  background: rgba(241, 184, 255, 0.2);
+  border-radius: 20px;
+
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -342,7 +502,7 @@ const LandingPage = () => {
       <Overlay>
         <NavBar>
           <Left>
-            <p>DailyUI_003</p>
+            <a href={'/'}>DailyUI_003</a>
           </Left>
           <Middle>
             <p>Our barbers</p>
@@ -393,7 +553,61 @@ const LandingPage = () => {
             </ScissorsWrapAbsolute>
           </ImageSection>
         </Header>
-        <Main></Main>
+        <Main>
+          <HaircutsSection>
+            <HaricutsIllustration>
+              <HaircutElement>
+                <HaircutImage src={'/images/landingPage/standardHaircut.png'} />
+                <HaircutDescription textRight={true}>
+                  <h1>Standard</h1>
+                  <span>25€</span>
+                </HaircutDescription>
+              </HaircutElement>
+              <HaircutElement>
+                <HaircutDescription textRight={false}>
+                  <h1>High fade</h1>
+                  <span>45€</span>
+                </HaircutDescription>
+                <HaircutImage src={'/images/landingPage/highFadeHaircut.png'} />
+              </HaircutElement>
+              <HaircutElement>
+                <HaircutImage
+                  src={'/images/landingPage/pompadourHaircut.png'}
+                />
+                <HaircutDescription textRight={true}>
+                  <h1>Pompadour</h1>
+                  <span>35€</span>
+                </HaircutDescription>
+              </HaircutElement>
+              <HaircutElement>
+                <HaircutDescription textRight={false}>
+                  <h1>Low fade</h1>
+                  <span>45€</span>
+                </HaircutDescription>
+                <HaircutImage src={'/images/landingPage/lowFadeHaircut.png'} />
+              </HaircutElement>
+            </HaricutsIllustration>
+            <HaricutsDescription>
+              <h1>We are here to do the haircut of your dreams</h1>
+              <p>
+                Eget quis purus vitae lobortis morbi placerat suscipit elit.
+                Molestie faucibus sit egestas at pulvinar. Id egestas
+                suspendisse eget viverra interdum feugiat. Tincidunt eu ornare
+                sapien diam, phasellus.
+              </p>
+              <p>
+                Augue nec libero, id id. Amet, dui eleifend id id elit odio est
+                vel. Tellus sapien etiam urna porta turpis tellus. Congue
+                sodales integer sodales mattis feugiat curabitur vitae.
+              </p>
+              <HaircutDescriptionButton>
+                book appointment
+              </HaircutDescriptionButton>
+            </HaricutsDescription>
+          </HaircutsSection>
+          <ShopsSection></ShopsSection>
+          <BookSection></BookSection>
+        </Main>
       </Overlay>
     </Layout>
   );
