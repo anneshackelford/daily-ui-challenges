@@ -11,21 +11,57 @@ const Layout = styled.div`
   line-height: 24px;
   color: #000000;
   background-color: #ededed;
+
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
 `;
 const BackgroundWrap = styled.div`
   position: relative;
   height: 992px;
+
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
 `;
 
 const TransitionWrapAbsolute = styled.div`
   position: absolute;
   top: 754px;
+  max-width: 100%;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
 `;
 
 const TransitionWrapRelative = styled.div`
   position: relative;
   height: 252px;
   width: 100vw;
+  max-width: 100%;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
 `;
 
 const Overlay = styled.div`
@@ -37,24 +73,19 @@ const Overlay = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 0 auto; */
-  /* max-width: 340px; */
   max-width: 80%;
   width: 100vw;
+
   font-weight: 300;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
 
   @media screen and (min-width: 540px) {
-    /* max-width: 500px; */
-    /* max-width: none; */
   }
-  @media screen and (min-width: 730px) {
-    /* max-width: 650px; */
+  @media screen and (min-width: 730px) {*/
   }
   @media screen and (min-width: 1300px) {
-    /* max-width: 1100px; */
   }
   @media screen and (min-width: 1700px) {
     max-width: 1520px;
@@ -62,13 +93,11 @@ const Overlay = styled.div`
 `;
 
 const NavBar = styled.nav`
-  /* border: 1px solid black; */
   height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  /* max-width: 80%; */
   align-items: center;
   margin: 0 auto;
   padding: 59px 0;
@@ -85,7 +114,6 @@ const NavBar = styled.nav`
 `;
 
 const Left = styled.div`
-  /* border: 1px solid white; */
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -100,7 +128,6 @@ const Left = styled.div`
 `;
 
 const Middle = styled.div`
-  /* border: 1px solid white; */
   display: none;
   font-weight: 300;
   font-size: 14px;
@@ -119,8 +146,6 @@ const Middle = styled.div`
 `;
 
 const Right = styled.div`
-  /* border: 1px solid white; */
-
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -164,22 +189,38 @@ const HeaderButton = styled.button`
   background: rgba(255, 255, 255, 0.3);
   margin-top: 45px;
   color: white;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
 `;
 
 const HaircutDescriptionButton = styled.button`
   ${StyledButtonMixin}
-  margin-top: 80px;
+  margin-top: 40px;
   color: white;
   background: #ec9fff;
+  @media screen and (min-width: 540px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 730px) {
+    margin-top: 80px;
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
 `;
 
 const Header = styled.header`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  /* border: 1px solid black; */
   width: 100%;
-  /* max-width: 80%; */
   margin-top: 0;
   align-items: center;
   gap: 50px;
@@ -192,7 +233,6 @@ const Header = styled.header`
     margin-top: 24px;
   }
   @media screen and (min-width: 1300px) {
-    /* gap: 302px; */
   }
   @media screen and (min-width: 1700px) {
     max-width: 1520px;
@@ -201,10 +241,8 @@ const Header = styled.header`
 `;
 
 const TextSection = styled.section`
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
 
   > h1 {
     font-weight: 350;
@@ -246,11 +284,8 @@ const TextSection = styled.section`
 `;
 
 const ImageSection = styled.section`
-  /* border: 1px solid black; */
-  /* height: 554px; */
   display: flex;
   align-items: center;
-  /* min-width: 30%; */
 
   @media screen and (min-width: 540px) {
     max-width: 75%;
@@ -268,20 +303,10 @@ const ScissorsBackgroundWrap = styled.div`
 
 const ScissorsWrapAbsolute = styled.div`
   position: absolute;
-  /* width: fit-content; */
-  /* width: 120%; */
-  /* width: 600px; */
-  /* top: 0; */
-  /* height: 100%; */
 `;
 
 const ScissorsWrapRelative = styled.div`
   position: relative;
-
-  /* width: 600px; */
-  /* width: fit-content; */
-  /* height: 450px; */
-  /* width: 100%; */
   @media screen and (min-width: 540px) {
     margin-top: 25%;
   }
@@ -292,31 +317,54 @@ const ScissorsWrapRelative = styled.div`
 `;
 
 const Main = styled.main`
-  /* border: 1px solid black; */
   width: 100%;
-  margin-top: 105px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 58px;
   @media screen and (min-width: 540px) {
+    margin-top: 60px;
   }
   @media screen and (min-width: 730px) {
+    margin-top: 105px;
   }
   @media screen and (min-width: 1300px) {
   }
 `;
 
 const HaircutsSection = styled.section`
-  /* border: 1px solid black; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 180px;
+  gap: 40px;
+  align-items: center;
+  @media screen and (min-width: 540px) {
+    gap: 60px;
+  }
+  @media screen and (min-width: 730px) {
+    gap: 100px;
+  }
+  @media screen and (min-width: 850px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+    gap: 180px;
+  }
+`;
+
+const HaricutsIllustrationContainer = styled.div`
+  width: 100%;
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
   }
+  @media screen and (min-width: 850px) {
+    width: 50%;
+  }
   @media screen and (min-width: 1300px) {
+    width: 50%;
   }
 `;
 
@@ -326,68 +374,98 @@ const HaricutsIllustration = styled.div`
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(25px);
   border-radius: 30px;
-  padding: 141px 83px;
+  padding: 40px 40px;
   @media screen and (min-width: 540px) {
+    padding: 80px 83px;
   }
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
+    padding: 141px 83px;
   }
 `;
 
 const HaricutsDescription = styled.div`
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   > h1 {
     font-weight: 600;
-    font-size: 48px;
+    font-size: 24px;
     line-height: 100%;
     color: #000000;
     margin: 0;
   }
   > p {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 120%;
     color: #000000;
   }
   > p:first-of-type {
-    margin-top: 84px;
+    margin-top: 40px;
   }
   > p:last-of-type {
     margin-bottom: 0;
   }
   @media screen and (min-width: 540px) {
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 40px;
+    }
   }
   @media screen and (min-width: 730px) {
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 60px;
+    }
+  }
+  @media screen and (min-width: 850px) {
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 60px;
+    }
   }
   @media screen and (min-width: 1300px) {
+    > h1 {
+      font-size: 48px;
+    }
+    > p {
+      font-size: 24px;
+    }
+    > p:first-of-type {
+      margin-top: 84px;
+    }
+  }
+  @media screen and (min-width: 1700px) {
   }
 `;
 
 const HaircutElement = styled.div`
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 52px;
-  /* padding: 0 83px; */
+  padding: 0 40px;
 
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
+    padding: 0 83px;
   }
 `;
 
 const HaircutImage = styled.img`
-  /* border: 1px solid black; */
-  /* width: 285px;
-height: 285px; */
+  width: 67%;
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -397,14 +475,13 @@ height: 285px; */
 `;
 
 const HaircutDescription = styled.div`
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: ${(props) => (props.textRight ? 'flex-start' : 'flex-end')};
   > h1 {
     font-weight: 350;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 48px;
     color: #000000;
     margin: 0;
@@ -420,11 +497,18 @@ const HaircutDescription = styled.div`
   @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
+    > h1 {
+      font-size: 36px;
+    }
+  }
+  @media screen and (min-width: 1700px) {
+    > h1 {
+      font-size: 48px;
+    }
   }
 `;
 
 const ShopsSection = styled.section`
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -443,7 +527,6 @@ const ShopsSection = styled.section`
 `;
 
 const BookSection = styled.section`
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -555,38 +638,46 @@ const LandingPage = () => {
         </Header>
         <Main>
           <HaircutsSection>
-            <HaricutsIllustration>
-              <HaircutElement>
-                <HaircutImage src={'/images/landingPage/standardHaircut.png'} />
-                <HaircutDescription textRight={true}>
-                  <h1>Standard</h1>
-                  <span>25€</span>
-                </HaircutDescription>
-              </HaircutElement>
-              <HaircutElement>
-                <HaircutDescription textRight={false}>
-                  <h1>High fade</h1>
-                  <span>45€</span>
-                </HaircutDescription>
-                <HaircutImage src={'/images/landingPage/highFadeHaircut.png'} />
-              </HaircutElement>
-              <HaircutElement>
-                <HaircutImage
-                  src={'/images/landingPage/pompadourHaircut.png'}
-                />
-                <HaircutDescription textRight={true}>
-                  <h1>Pompadour</h1>
-                  <span>35€</span>
-                </HaircutDescription>
-              </HaircutElement>
-              <HaircutElement>
-                <HaircutDescription textRight={false}>
-                  <h1>Low fade</h1>
-                  <span>45€</span>
-                </HaircutDescription>
-                <HaircutImage src={'/images/landingPage/lowFadeHaircut.png'} />
-              </HaircutElement>
-            </HaricutsIllustration>
+            <HaricutsIllustrationContainer>
+              <HaricutsIllustration>
+                <HaircutElement>
+                  <HaircutImage
+                    src={'/images/landingPage/standardHaircut.png'}
+                  />
+                  <HaircutDescription textRight={true}>
+                    <h1>Standard</h1>
+                    <span>25€</span>
+                  </HaircutDescription>
+                </HaircutElement>
+                <HaircutElement>
+                  <HaircutDescription textRight={false}>
+                    <h1>High fade</h1>
+                    <span>45€</span>
+                  </HaircutDescription>
+                  <HaircutImage
+                    src={'/images/landingPage/highFadeHaircut.png'}
+                  />
+                </HaircutElement>
+                <HaircutElement>
+                  <HaircutImage
+                    src={'/images/landingPage/pompadourHaircut.png'}
+                  />
+                  <HaircutDescription textRight={true}>
+                    <h1>Pompadour</h1>
+                    <span>35€</span>
+                  </HaircutDescription>
+                </HaircutElement>
+                <HaircutElement>
+                  <HaircutDescription textRight={false}>
+                    <h1>Low fade</h1>
+                    <span>45€</span>
+                  </HaircutDescription>
+                  <HaircutImage
+                    src={'/images/landingPage/lowFadeHaircut.png'}
+                  />
+                </HaircutElement>
+              </HaricutsIllustration>
+            </HaricutsIllustrationContainer>
             <HaricutsDescription>
               <h1>We are here to do the haircut of your dreams</h1>
               <p>
