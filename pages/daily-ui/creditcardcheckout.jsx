@@ -19,7 +19,7 @@ const NavBar = styled.nav`
   width: 85%;
 
   > a {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -42,7 +42,7 @@ const NavRightSide = styled.div`
     flex-direction: row;
     justify-content: space-between;
     gap: 53px;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -82,7 +82,7 @@ const FooterRightSide = styled.div`
     flex-direction: row;
     justify-content: space-between;
     gap: 53px;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -92,7 +92,7 @@ const FooterRightSide = styled.div`
 `;
 
 const Copyright = styled.label`
-  font-family: 'Switzer';
+  font-family: 'Switzer', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

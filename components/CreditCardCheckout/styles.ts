@@ -12,7 +12,7 @@ const Information = styled.div<Props>`
   border-radius: 20px;
 
   > h2 {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -43,7 +43,7 @@ const Form = styled.div`
 `;
 
 const Label = styled.label`
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -129,7 +129,7 @@ const ButtonMixin = css`
   align-items: center;
   padding: 0 20px;
 
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -200,7 +200,7 @@ const Mixin = css`
   flex-direction: column;
   background-color: transparent;
   > h2 {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -402,7 +402,7 @@ const FieldValue = styled.div`
   position: absolute;
   top: 30px;
   left: 17px;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -422,7 +422,7 @@ const FieldValueAddress = styled.div`
   position: absolute;
   top: 25px;
   left: 17px;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;

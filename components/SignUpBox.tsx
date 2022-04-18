@@ -9,7 +9,7 @@ const InputMixin = css`
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.3);
 
-  font-family: 'Switzer';
+  font-family: 'Switzer', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -107,7 +107,7 @@ const SignUpBoxContainer = styled.div`
     margin-top: 51px;
   }
   > h2 {
-    font-family: 'Switzer';
+    font-family: 'Switzer', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

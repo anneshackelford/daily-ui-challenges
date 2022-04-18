@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Layout = styled.div`
   background-color: #ededed;
   height: 3785px;
-  font-family: 'Segoe UI Variable';
+  font-family: 'Segoe UI Variable', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -83,7 +83,7 @@ const Overlay = styled.div`
 
   @media screen and (min-width: 540px) {
   }
-  @media screen and (min-width: 730px) {*/
+  @media screen and (min-width: 730px) {
   }
   @media screen and (min-width: 1300px) {
   }
@@ -464,8 +464,8 @@ const HaircutElement = styled.div`
   }
 `;
 
-const HaircutImage = styled.img`
-  width: 67%;
+const HaircutImage = styled.div`
+  min-width: 67%;
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -641,9 +641,18 @@ const LandingPage = () => {
             <HaricutsIllustrationContainer>
               <HaricutsIllustration>
                 <HaircutElement>
-                  <HaircutImage
-                    src={'/images/landingPage/standardHaircut.png'}
-                  />
+                  <HaircutImage>
+                    <Image
+                      src='/images/landingPage/standardHaircut.png'
+                      alt='standard haircut'
+                      // layout='fill'
+                      // objectFit='cover'
+                      // objectPosition={'bottom'}
+                      height='285'
+                      width='285'
+                      priority
+                    />
+                  </HaircutImage>
                   <HaircutDescription textRight={true}>
                     <h1>Standard</h1>
                     <span>25€</span>
@@ -654,14 +663,32 @@ const LandingPage = () => {
                     <h1>High fade</h1>
                     <span>45€</span>
                   </HaircutDescription>
-                  <HaircutImage
-                    src={'/images/landingPage/highFadeHaircut.png'}
-                  />
+                  <HaircutImage>
+                    <Image
+                      src='/images/landingPage/highFadeHaircut.png'
+                      alt='hide fade haircut'
+                      // layout='fill'
+                      // objectFit='cover'
+                      // objectPosition={'bottom'}
+                      height='285'
+                      width='285'
+                      priority
+                    />
+                  </HaircutImage>
                 </HaircutElement>
                 <HaircutElement>
-                  <HaircutImage
-                    src={'/images/landingPage/pompadourHaircut.png'}
-                  />
+                <HaircutImage>
+                    <Image
+                      src='/images/landingPage/pompadourHaircut.png'
+                      alt='pompadour haircut'
+                      // layout='fill'
+                      // objectFit='cover'
+                      // objectPosition={'bottom'}
+                      height='285'
+                      width='285'
+                      priority
+                    />
+                  </HaircutImage>
                   <HaircutDescription textRight={true}>
                     <h1>Pompadour</h1>
                     <span>35€</span>
@@ -672,9 +699,18 @@ const LandingPage = () => {
                     <h1>Low fade</h1>
                     <span>45€</span>
                   </HaircutDescription>
-                  <HaircutImage
-                    src={'/images/landingPage/lowFadeHaircut.png'}
-                  />
+                  <HaircutImage>
+                    <Image
+                      src='/images/landingPage/lowFadeHaircut.png'
+                      alt='low fade haircut'
+                      // layout='fill'
+                      // objectFit='cover'
+                      // objectPosition={'bottom'}
+                      height='285'
+                      width='285'
+                      priority
+                    />
+                  </HaircutImage>
                 </HaircutElement>
               </HaricutsIllustration>
             </HaricutsIllustrationContainer>

@@ -12,7 +12,7 @@ const Main = styled.main`
   text-align: center;
 
   > h1 {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
@@ -29,7 +29,7 @@ const ProgressText = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 56px;
-  font-family: 'Switzer';
+  font-family: 'Switzer', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

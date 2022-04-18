@@ -65,7 +65,7 @@ const ButtonText = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -128,7 +128,7 @@ const ItemHorizontal = styled.div`
 
   > h2 {
     margin: 0px;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -139,7 +139,7 @@ const ItemHorizontal = styled.div`
   > p {
     margin-top: 0px;
 
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -148,7 +148,7 @@ const ItemHorizontal = styled.div`
   }
 
   > p:last-of-type {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -177,7 +177,7 @@ const ItemVertical = styled.div`
 
 const Label = styled.p`
   margin: 4px 0 0 10px;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -197,7 +197,7 @@ const Cost = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -222,7 +222,7 @@ const Total = styled.div`
   justify-content: space-between;
 
   > div > p {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
