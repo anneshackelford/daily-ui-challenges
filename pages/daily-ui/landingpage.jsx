@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Layout = styled.div`
   background-color: #ededed;
-  height: 3785px;
+  height: 4500px;
   font-family: 'Segoe UI Variable', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -39,6 +39,7 @@ const TransitionWrapAbsolute = styled.div`
   position: absolute;
   top: 754px;
   max-width: 100%;
+  /* height: 252px; */
   @media screen and (min-width: 540px) {
   }
   @media screen and (min-width: 730px) {
@@ -204,6 +205,46 @@ const HaircutDescriptionButton = styled.button`
   margin-top: 40px;
   color: white;
   background: #ec9fff;
+  @media screen and (min-width: 540px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 730px) {
+    margin-top: 80px;
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
+`;
+
+const ShopsDescriptionButton = styled.button`
+  ${StyledButtonMixin}
+  margin-top: 40px;
+  color: white;
+  background: linear-gradient(
+    96.08deg,
+    #2ebdea 2.15%,
+    rgba(46, 189, 234, 0) 137.98%
+  );
+
+  @media screen and (min-width: 540px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 730px) {
+    margin-top: 80px;
+  }
+  @media screen and (min-width: 1300px) {
+  }
+  @media screen and (min-width: 1700px) {
+  }
+`;
+
+const BookDescriptionButton = styled.button`
+  ${StyledButtonMixin}
+  margin-top: 40px;
+  color: white;
+  background: linear-gradient(96.08deg, rgba(236, 159, 255, 0.813008) 2.15%, rgba(236, 159, 255, 0) 137.98%);
+
   @media screen and (min-width: 540px) {
     margin-top: 60px;
   }
@@ -509,40 +550,236 @@ const HaircutDescription = styled.div`
 `;
 
 const ShopsSection = styled.section`
+position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 180px;
+  /* gap: 180px; */
   width: 100%;
-  height: 705px;
   background: rgba(165, 219, 236, 0.5);
   border-radius: 20px;
 
+
   @media screen and (min-width: 540px) {
+
   }
   @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 850px) {
+    flex-direction: row;
   }
   @media screen and (min-width: 1300px) {
   }
 `;
 
 const BookSection = styled.section`
+  position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 180px;
   width: 100%;
-  height: 572px;
   background: rgba(241, 184, 255, 0.2);
   border-radius: 20px;
+  margin-bottom: 214px;
 
   @media screen and (min-width: 540px) {
+
   }
   @media screen and (min-width: 730px) {
+  }
+  @media screen and (min-width: 850px) {
+    flex-direction: row-reverse;
   }
   @media screen and (min-width: 1300px) {
   }
 `;
+
+const ShopsDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0px 20px; */
+  padding: 88% 40px 40px;
+  width: 100%;
+
+  > h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+  }
+  > p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+  }
+  > p:first-of-type {
+    margin-top: 40px;
+  }
+  > p:last-of-type {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 540px) {
+
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 40px;
+    }
+  }
+  @media screen and (min-width: 730px) {
+
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 60px;
+    }
+  }
+  @media screen and (min-width: 850px) {
+    width: 40%;
+    margin: 40px 40px;
+    padding: 40px;
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 60px;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    > h1 {
+      font-size: 48px;
+    }
+    > p {
+      font-size: 24px;
+    }
+    > p:first-of-type {
+      margin-top: 84px;
+    }
+  }
+  @media screen and (min-width: 1700px) {
+  }
+`;
+
+const BooksDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0px 20px; */
+  padding: 88% 40px 40px;
+  width: 100%;
+
+  > h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+  }
+  > p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+  }
+  > p:first-of-type {
+    margin-top: 40px;
+  }
+  > p:last-of-type {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 540px) {
+
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 40px;
+    }
+  }
+  @media screen and (min-width: 730px) {
+
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 60px;
+    }
+  }
+  @media screen and (min-width: 850px) {
+    width: 40%;
+    margin: 40px 40px;
+    padding: 40px;
+    > h1 {
+      font-size: 36px;
+    }
+    > p:first-of-type {
+      margin-top: 60px;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    > h1 {
+      font-size: 48px;
+    }
+    > p {
+      font-size: 24px;
+    }
+    > p:first-of-type {
+      margin-top: 84px;
+    }
+  }
+  @media screen and (min-width: 1700px) {
+  }
+`;
+
+const ShopsImageAbsolute = styled.div`
+position: absolute;
+top: -11%;
+right: 0px;
+width: 100%;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+
+
+  }
+  @media screen and (min-width: 850px) {
+    right: 40px;
+width: 50%;
+
+}
+  @media screen and (min-width: 1300px) {
+
+  }
+`;
+
+const BooksImageAbsolute = styled.div`
+position: absolute;
+top: -11%;
+left: 0px;
+width: 100%;
+  @media screen and (min-width: 540px) {
+  }
+  @media screen and (min-width: 730px) {
+
+
+  }
+  @media screen and (min-width: 850px) {
+    right: 40px;
+width: 50%;
+top: unset;
+bottom: -14%;
+}
+  @media screen and (min-width: 1300px) {
+
+  }
+`;
+
+
 
 const template = styled.div`
   @media screen and (min-width: 540px) {
@@ -561,8 +798,6 @@ const LandingPage = () => {
           src='/images/landingPage/background.png'
           alt='pastel background image'
           layout='fill'
-          // objectFit='cover'
-          // objectPosition={'26%'}
           height='992'
           width='1920'
           priority
@@ -574,8 +809,6 @@ const LandingPage = () => {
             src='/images/landingPage/background2.png'
             alt='transition background image'
             layout='fill'
-            // objectFit='cover'
-            // objectPosition={'bottom'}
             height='252'
             width='1920'
             priority
@@ -612,9 +845,6 @@ const LandingPage = () => {
               <Image
                 src='/images/landingPage/scissorsBackground.png'
                 alt='blob background'
-                // layout='fill'
-                // objectFit='cover'
-                // objectPosition={'50% 50%'}
                 height='556'
                 width='581'
                 priority
@@ -625,9 +855,6 @@ const LandingPage = () => {
                 <Image
                   src='/images/landingPage/scissors.png'
                   alt='scissors'
-                  // layout='fill'
-                  // objectFit='cover'
-                  // objectPosition={'bottom'}
                   height='560'
                   width='560'
                   priority
@@ -645,9 +872,6 @@ const LandingPage = () => {
                     <Image
                       src='/images/landingPage/standardHaircut.png'
                       alt='standard haircut'
-                      // layout='fill'
-                      // objectFit='cover'
-                      // objectPosition={'bottom'}
                       height='285'
                       width='285'
                       priority
@@ -667,9 +891,6 @@ const LandingPage = () => {
                     <Image
                       src='/images/landingPage/highFadeHaircut.png'
                       alt='hide fade haircut'
-                      // layout='fill'
-                      // objectFit='cover'
-                      // objectPosition={'bottom'}
                       height='285'
                       width='285'
                       priority
@@ -677,13 +898,10 @@ const LandingPage = () => {
                   </HaircutImage>
                 </HaircutElement>
                 <HaircutElement>
-                <HaircutImage>
+                  <HaircutImage>
                     <Image
                       src='/images/landingPage/pompadourHaircut.png'
                       alt='pompadour haircut'
-                      // layout='fill'
-                      // objectFit='cover'
-                      // objectPosition={'bottom'}
                       height='285'
                       width='285'
                       priority
@@ -732,8 +950,48 @@ const LandingPage = () => {
               </HaircutDescriptionButton>
             </HaricutsDescription>
           </HaircutsSection>
-          <ShopsSection></ShopsSection>
-          <BookSection></BookSection>
+          <ShopsSection>
+            <ShopsDescription>
+              <h1>Our shops are all over the city</h1>
+              <p>
+                Eget quis purus vitae lobortis morbi placerat suscipit elit.
+                Molestie faucibus sit egestas at pulvinar. Id egestas
+              </p>
+              <ShopsDescriptionButton>
+                find the closest shop
+              </ShopsDescriptionButton>
+            </ShopsDescription>
+            <ShopsImageAbsolute>
+                <Image
+                  src='/images/landingPage/map-pin-dynamic-clay.png'
+                  alt='map pin'
+                  height='607'
+                  width='607'
+                  priority
+                />
+            </ShopsImageAbsolute>
+          </ShopsSection>
+          <BookSection>
+          <BooksImageAbsolute>
+                <Image
+                  src='/images/landingPage/calender-dynamic-clay.png'
+                  alt='map pin'
+                  height='607'
+                  width='607'
+                  priority
+                />
+            </BooksImageAbsolute>
+            <BooksDescription>
+              <h1>Book whenever you’re available</h1>
+              <p>
+                Eget quis purus vitae lobortis morbi placerat suscipit elit.
+                Molestie faucibus sit egestas at pulvinar. Id egestas
+              </p>
+              <BookDescriptionButton>
+              book appointment
+              </BookDescriptionButton>
+            </BooksDescription>
+          </BookSection>
         </Main>
       </Overlay>
     </Layout>
